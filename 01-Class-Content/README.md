@@ -2,7 +2,7 @@
 
 ## Overview
 
-Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases. 
+Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases.
 
 You have several choices for the programming language that you use for building and deploying full-stack web applications, including JavaScript, PHP, and Python. This course focuses on JavaScript. We’ll use it to program both the browser (aka the client) and the server.
 
@@ -17,13 +17,16 @@ Subsequent units will build on this foundation of HTML, CSS, and version control
 ## Key Topics
 
 The following topics will be covered in this unit:
+
 * Command-line basics
   * Navigating the file tree
   * Creating, copying, and removing files and directories
+
 * HTML
   * Semantic elements, tags
   * Attributes
   * Best practices: indentation, file naming conventions and directory structure
+
 * CSS
   * Order of importance
   * Class vs. id
@@ -32,12 +35,14 @@ The following topics will be covered in this unit:
   * Box model
   * Positioning and floats
   * Color: hexadecimal, rgb and named
+
 * Git & Git workflow
   * git clone
   * git add
   * git commit
   * git push
   * git pull
+
 * GitHub
   * Create a repository
   * Deploy to personal pages
@@ -75,6 +80,5 @@ Take the provided codebase and refactor it to make it accessible. Don't forget t
 * [Pro Git](https://git-scm.com/book/en/v2)
 * [Dev Docs](https://devdocs.io/)
 
-
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

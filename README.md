@@ -64,3 +64,4 @@ You must give a full effort on every group and individual project.
   * Learning Assistant channel
   * Your study group (I expect you should have at least one by day 4 of the course)
   * Your rubber ducky (it helps)
+  
