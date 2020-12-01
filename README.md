@@ -1,6 +1,6 @@
 # Rutgers Coding Bootcamp - Full Stack Web
 
-## May 2020 Cohort
+## December 2020 Cohort
 
 -----------------------------------------
 
@@ -40,7 +40,7 @@ You must give a full effort on every group and individual project.
 * Before the bootcamp is over, feel free to ask for feedback on a particular project and I will help you make it look better to recruiters.
 * Your grades will be here.
 
-[rutsomfsfpt05-nni4187.slack.com](https://rutsomfsfpt05-nni4187.slack.com)
+[rutsomfsfpt12-oww2361.slack.com](https://rutsomfsfpt12-oww2361.slack.com)
 
 * Your zoom meeting information will be available in slack in the General channel description.
 * Make sure you maintain contact with your SSM if you have any issues with the class or have a general issue.
