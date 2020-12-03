@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superheroes Title</title>
+    <style>
+        .circle{
+            border: 1px black solid;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            opacity: 1;
+        }
+        .active{
+            opacity: 0.5;
+            border-radius: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>If I want to test something, it shows up immediately.</h1>
+    <img src="butterfly.jpg" alt="Butterfly Nebula" width="100" height="120" />
+    <!-- <img src="https://i.etsystatic.com/10010751/r/il/57654c/2432424810/il_794xN.2432424810_537l.jpg" alt="Green Image" /> -->
+    <p>My <em>em tag</em> is before the "is" in this <strong>sentence.</strong></p>
+    <p>Text before quote.
+        <blockquote>
+            This is a quote block;
+        </blockquote>
+        Text after quote.
+    </p>
+    <div class="circle">
+        This is a circle.
+    </div>
+    
+    <script>
+        document.querySelector(".circle").addEventListener("click",
+        function(event){
+            event.target.classList.add("active");
+        });
+    </script>
+</body>
+</html>
