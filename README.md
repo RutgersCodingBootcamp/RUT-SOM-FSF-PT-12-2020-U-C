@@ -62,6 +62,7 @@ You must give a full effort on every group and individual project.
   * The TA
   * The SSM
   * Learning Assistant channel
+  * Your assigned tutor (You can request one in BCS and please do so to get the maximum out of the course)
   * Your study group (I expect you should have at least one by day 4 of the course)
   * Your rubber ducky (it helps)
 
@@ -74,6 +75,13 @@ Every class (or whenever you need to update), type `git pull` or the equivalent 
 
 The important thing about using the repo is that I want you to make folders called "student" to keep it separate from the rest of the repo. That way, your work won't disrupt the files and solutions from coming and triggering a merge commit. I explicitly made the repo exclude the "student" folders so that way you can work directly in repo. Having said that,
 don't change any of the files other the files inside of the student folder. That way, you will always have an easy time pulling in the latest commits.
+
+| What I want to do | What folder should I be in | Command |
+| - | - | - |
+| get a clean copy of the class repository | change your directory to folder where you want to work in, usually it is Desktop | `git clone git@github.com:RutgersCodingBootcamp/RUT-SOM-FSF-PT-12-2020-U-C.git rucb-repo` |
+| update my repository to the latest activities and solutions | rucb-repo | `git pull` |
+
+## Class motto
 
 Remember the ABCs of this class.
 
