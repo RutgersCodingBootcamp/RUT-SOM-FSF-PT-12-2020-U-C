@@ -78,8 +78,9 @@ don't change any of the files other the files inside of the student folder. That
 
 | What I want to do | What folder should I be in | Command |
 | - | - | - |
-| get a clean copy of the class repository | change your directory to folder where you want to work in, usually it is Desktop | ```git clone git@github.com:RutgersCodingBootcamp/RUT-SOM-FSF-PT-12-2020-U-C.git rucb-repo``` |
-| update my repository to the latest activities and solutions | rucb-repo | ```git pull``` |
+| get a clean copy of the class repository | change your directory to folder where you want to work in, usually it is Desktop | `git clone git@github.com:RutgersCodingBootcamp/RUT-SOM-FSF-PT-12-2020-U-C.git rucb-repo` |
+| update my repository to the latest activities and solutions | rucb-repo | `git pull` |
+| need a folder to put my work into | choose an activity folder | `mkdir student` |
 
 ## Class motto
 
