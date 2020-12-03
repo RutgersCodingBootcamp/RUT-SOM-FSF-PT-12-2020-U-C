@@ -64,4 +64,17 @@ You must give a full effort on every group and individual project.
   * Learning Assistant channel
   * Your study group (I expect you should have at least one by day 4 of the course)
   * Your rubber ducky (it helps)
-  
+
+## Notes about using the repo
+
+Working in the student repo isn't difficult. In fact, it gets you used to using git and versioning. When you have an issue or if you need to get all student materials for the first
+time, please use the command `git clone git@github.com:RutgersCodingBootcamp/RUT-SOM-FSF-PT-12-2020-U-C.git rucb-repo`. This command will clone the repo to your computer inside a folder called "rucb-repo".
+
+Every class (or whenever you need to update), type `git pull` or the equivalent `git fetch origin; git merge origin/master` to get the latest commits (versions). This retrieve the latest files and bring them to your local repository.
+
+The important thing about using the repo is that I want you to make folders called "student" to keep it separate from the rest of the repo. That way, your work won't disrupt the files and solutions from coming and triggering a merge commit. I explicitly made the repo exclude the "student" folders so that way you can work directly in repo. Having said that,
+don't change any of the files other the files inside of the student folder. That way, you will always have an easy time pulling in the latest commits.
+
+Remember the ABCs of this class.
+
+Always Be Coding.
