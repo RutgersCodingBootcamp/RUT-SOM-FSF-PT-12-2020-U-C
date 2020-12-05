@@ -41,3 +41,9 @@ footer {
   padding: 10px;
   border: 1px solid white;
 }
+.style-class{
+  margin: 20px 10px 10px 20px; /* (top, right, bottom, left)*/
+  margin: 20px 10px 30px; /* (top, right/left, bottom)*/
+  margin: 20px 10px; /* (top/bottom, right/left)*/
+  margin: 20px; /* (top/right/bottom/left)*/
+}

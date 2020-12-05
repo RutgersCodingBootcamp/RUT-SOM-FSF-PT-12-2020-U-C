@@ -11,7 +11,9 @@
 * Hint: We've provided the styling you need for the header element. Use this as a starting point to style the others. 
 
 * Hint: You will need to apply each of the following CSS properties at least once:
-
+section{
+  display:inline-block
+}
   * padding
 
   * margin
