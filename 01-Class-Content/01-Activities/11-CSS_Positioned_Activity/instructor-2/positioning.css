@@ -1,0 +1,38 @@
+/* body{
+    background: black;
+} */
+body{
+    padding: 10px 120px; /* top/bottom left/right */
+}
+.c-fixed{
+    background-color: gray;
+    position:fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+.c-relative{
+    background-color: gray;
+    position: relative;
+    height: 200px;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.c-absolute{
+    background-color: lightgray;
+    width: 30%;
+    height: 100px;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}

@@ -17,6 +17,7 @@
 
   /* Hides element as if it's not there (compare with "visibility: hidden;"). */
   display: none;
+  /* opacity: 0.3; */
 }
 
 .box-2 {

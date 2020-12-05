@@ -17,23 +17,29 @@
   border: 2px solid black;
 }
 
+.box-set{
+  /* left: 50px; */
+}
+
 /* Box rules: percentages define anchors (i.e. position of each box relative to enclosing box) */
 
 .box-1 {
-  top: 6%;
+  top: 90%;
   left: 2%;
 }
 
 .box-2 {
   top: 0;
+  
+  /* right: 0px; */
   right: -40px;
 }
 
 .box-3 {
   right: 20px;
-  bottom: -10px;
+  bottom: -20px;
 }
 
 .box-4 {
-  bottom: 0;
+  bottom: 0px;
 }
