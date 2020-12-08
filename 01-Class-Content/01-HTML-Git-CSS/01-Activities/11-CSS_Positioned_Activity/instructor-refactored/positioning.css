@@ -1,0 +1,42 @@
+/* body{
+    background:black;
+} */
+
+body{
+    padding: 10px 150px; /* top/bottom left/right */
+}
+/* any extra information */
+aside{
+    background-color: #999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* usually an image or a chart or a table */
+figure{
+    background-color: #eee;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+}
+/* usually hovers over a chart or an image, ex. price */
+figcaption{
+    background-color: #999;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    width: 33%;
+    height: 100px;
+}
+/* removed the extra lines above to make it DRY */
+aside,
+figure,
+figcaption{
+    padding: 20px;
+    line-height: 30px;
+    font-size: 30px;
+    text-align: center;
+}
