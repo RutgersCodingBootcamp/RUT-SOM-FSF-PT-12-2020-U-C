@@ -24,8 +24,6 @@ In this activity, you'll be modifying CSS properties to style your text in diffe
 
   * Add in styles for each class 
 
-## Bonus
-
 * If you finish early, read about [TypePlate - http://typeplate.com/](http://typeplate.com/) and see if you can figure out how to incorporate it into your site. 
 
 * If you still finish early, spend some time trying to actually make the page look nice. Think about what's aesthetically pleasing and push yourself to create it. 
