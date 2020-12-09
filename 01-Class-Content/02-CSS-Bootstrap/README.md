@@ -58,6 +58,12 @@ Use the Bootstrap CSS Framework to recreate your portfolio.
 * [!important](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 * [CDN (wikipedia)](https://en.wikipedia.org/wiki/Content_delivery_network)
 * [GitHub Pages](https://pages.github.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [w3 Validation Service](https://validator.w3.org/#validate_by_input)
+* [Website Speed and Performance Optimization](https://gtmetrix.com/)
+* [Flexbox Froggy](https://flexboxfroggy.com/)
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Color Scheme Designer](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
