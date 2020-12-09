@@ -66,4 +66,4 @@ Use the Bootstrap CSS Framework to recreate your portfolio.
 * [Color Scheme Designer](https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
