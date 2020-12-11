@@ -16,6 +16,8 @@ In this activity, you'll be modifying CSS properties to style your text in diffe
 
   * line-height
 
+  * letter-spacing
+
 * Hint: You will need to do three things to accomplish this task.
 
   * Link to a CSS page that you'll make

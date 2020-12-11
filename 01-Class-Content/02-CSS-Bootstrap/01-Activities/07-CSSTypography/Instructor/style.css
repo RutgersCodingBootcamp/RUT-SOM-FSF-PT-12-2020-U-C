@@ -1,0 +1,30 @@
+/* body{
+    background: black;
+} */
+h1{
+    /*
+    * font-family
+
+    * font-size
+  
+    * font-weight
+  
+    * line-height
+  
+    * letter-spacing
+    */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 80px;
+    letter-spacing: 30px;
+    text-transform: capitalize;
+}
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
