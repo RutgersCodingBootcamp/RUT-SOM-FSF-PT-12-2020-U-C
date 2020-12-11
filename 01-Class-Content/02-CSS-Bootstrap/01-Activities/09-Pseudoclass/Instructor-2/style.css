@@ -1,0 +1,21 @@
+/* body{
+    background: yellow;
+} */
+
+a{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: red;
+}
+a:active{
+    background-color: blue;
+}
+a:focus{
+    text-decoration: underline;
+}
