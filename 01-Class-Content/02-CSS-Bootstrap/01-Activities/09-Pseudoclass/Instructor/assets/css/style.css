@@ -1,0 +1,32 @@
+/* body{
+    background: fuchsia;
+} */
+/* import is better for fonts so that it travels with the CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+
+a{
+    font-family: 'Langar', cursive;
+    text-decoration: none;
+    color: red;
+    background: yellow;
+}
+li:nth-child(2n) a{
+    color: fuchsia;
+    background: black;
+    text-decoration: underline;
+}
+
+a:hover,
+li:nth-child(2n) a:hover{
+    background-color: white;
+}
+
+a:active,
+li:nth-child(2n) a:active{
+    background-color: black;
+}
+
+a:focus{
+    font-size: 70px;
+}
+
