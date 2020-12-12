@@ -16,7 +16,7 @@ body {
   line-height: 27px;
 
   /* Visual */
-  background-color: #333;
+  background-color: #ccc;
 }
 
 /*
@@ -25,8 +25,7 @@ body {
 */
 .wrapper {
   /* Box-model */
-  
-  width: 600px;
+  width: 1024px;
 
   /* Positioning */
   margin: 40px auto;
@@ -55,10 +54,21 @@ body {
   background: #eee;
 }
 
-
 /*
-  
-  */
+  These rules take effect when the browser's width
+  is either 768px or less.
+*//* col-md? */
+@media screen and (max-width: 768px) {
+  /* The body's bg color will be #333 */
+  body {
+    background-color: #333;
+  }
+
+  /* The wrapper's width will be 600px */
+  .wrapper {
+    width: 600px;
+  }
+}
 /*
 xs: 0,
   sm: 576px,
@@ -69,12 +79,5 @@ xs: 0,
 
 @media screen and (min-width: 768px){
   /* tablet and bigger */
-  body {
-    
-    background-color: #ccc;
-  }
 
-  .wrapper {
-    width: 1024px;
-  }
 }
