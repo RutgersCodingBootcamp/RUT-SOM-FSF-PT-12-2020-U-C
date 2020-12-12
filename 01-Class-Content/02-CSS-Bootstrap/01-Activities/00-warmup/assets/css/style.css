@@ -1,0 +1,33 @@
+
+div {
+  width: 100px;
+  height: 100px;
+  /*background: red;*/
+  position: relative;
+  perspective: 100px;
+  
+}
+div:hover{
+  animation: mymove 5s infinite;
+}
+
+
+@keyframes mymove {
+  0%   {
+    transform:rotateX(0deg) rotateY(0deg);
+    
+  	background: blue
+   }
+  25%  {
+   }
+  50%  {
+    background: green;
+    transform:rotateX(45deg) rotateY(15deg);
+    }
+  75% {
+  }
+  100% {
+    transform:rotateX(0deg) rotateY(0deg);
+    background: red
+   }
+}
