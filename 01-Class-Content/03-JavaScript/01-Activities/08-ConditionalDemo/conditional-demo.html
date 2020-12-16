@@ -9,22 +9,37 @@
     <script type="text/javascript">
 
       // Here we create our prompt and confirm variables which will store user input.
-      var confirmSushi = confirm("Do you like sushi?");
-      var confirmGingerTea = confirm("Do you like Ginger Tea?");
-      var sushiType = prompt("What kind of sushi do you like?");
+      var confirmSushi = confirm("Do you like sushi?"); // true (ok) or false (cancel)
+      var confirmGingerTea = confirm("Do you like Ginger Tea?"); // true or false
+      var sushiType = prompt("What kind of sushi do you like?"); // response or what the user typed in or a string or null
 
       // If the user likes sushi (confirmSushi === true), we run the following block of code.
       if (confirmSushi) {
+        // only happens when true
         alert("You like " + sushiType + "!");
       }
       // If the user likes ginger tea (confirmGingerTea === true), we run the following block of code.
       else if (confirmGingerTea) {
+        // only happens when confirmSushi is false and confirmGingerTea is true
         alert("You like ginger tea!!");
       }
       // If neither of the previous condition were true, we run the following block of code.
       else {
+        // only happens when both previous conditions (booleans) are false
         alert("You don't like sushi or ginger tea.");
       }
+
+      // // if ("Jen" !== "Jen") {
+      // //   // only happens when true
+      // //   alert("Cool things happen");
+      // // }
+      // // else if(confirmGingerTea){
+      // //   alert("Anthony is by himself... sad.")
+      // // }
+
+      // else{
+      //   alert("Compiler will go berserk if \"else\" is by itself.");
+      // }
 
     </script>
 
