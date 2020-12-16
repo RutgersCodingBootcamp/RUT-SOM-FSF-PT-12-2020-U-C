@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("Hello world!");
+
+        // * Create a website (from scratch) that asks users if they eat steak.
+        var likeSteak = confirm("Do you steak?"); // true or false
+
+        // * If they respond with "yes", alert the following to the page: "Here’s a Steak Sandwich!"
+        if(likeSteak){
+            // true
+            alert("Here’s a Steak Sandwich!");
+        }
+
+        // * If they respond with "no", alert the following to the page: "Here’s a Tofu Stir-Fry!"
+        else{
+            // false
+            alert("Here’s a Tofu Stir-Fry! Goes great with mangos!");
+        }
+
+        // * **BONUS:** Ask what the user’s birth year is. If they are under 21, alert the following: "No Sake for you!"
+        var birthYear = prompt("What year were you born?");
+        console.log(birthYear);
+        console.log(typeof (2020 - birthYear));
+        console.log(birthYear > 1999);
+
+        // is your birthyear is less than 21 years
+        if(2020 - birthYear  < 21){
+            alert("No Sake for you!");
+        }
+        else{
+            alert("Sake sake!");
+        }
+
+    </script>
+</body>
+</html>
