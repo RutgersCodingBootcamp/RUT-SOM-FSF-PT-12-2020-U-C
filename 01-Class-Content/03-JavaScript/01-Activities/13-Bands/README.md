@@ -17,3 +17,11 @@
   * **HINT:**  You will need to research how to use `.indexOf()`.
 
   * **HINT:** You will need to research how to use `.toLowerCase()`.
+
+"Metallica"
+
+"METALLICA"
+
+"metallica"
+
+"metalLICA"
