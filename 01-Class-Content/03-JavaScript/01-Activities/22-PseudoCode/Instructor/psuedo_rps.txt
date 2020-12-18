@@ -1,0 +1,24 @@
+have to make choices
+
+the user gives either rock paper or scissor
+
+computer has to randomly choose rock paper or scissor
+
+if user selects rock and computer selects scissors
+or
+if user selects paper and computer selects rock
+or        
+if user selects scissors and computer selects paper
+    user wins
+    alert user wins
+
+if computer selects rock and user selects scissors
+or
+if computer selects paper and user selects rock
+or        
+if computer selects scissors and user selects paper
+    computer wins
+    alert computer wins
+
+otherwise
+    alert it is a tie
