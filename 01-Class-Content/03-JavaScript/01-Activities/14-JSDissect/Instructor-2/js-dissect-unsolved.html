@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Data Types, User Input, Conditional Logic - Uncommented
+    </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var userName = prompt("What's your name?"); // ask for the user's answer and it is a string
+      var confirmCats = confirm("Do you like cats?"); // ask if they like cats and it true/false boolean
+
+      // these are my stored values getting assigned to variables
+      var petName = "Meeses";
+      var petType = "Tuxedo Cat";
+      var petAge = 5;
+      var petIsCat = true;
+
+      // if confirmcats is true, we print out the cat's info (petname, pettype, petage)
+      if (confirmCats) {
+        alert(petName + " " + petType + " " + petAge);
+      }
+      else {
+        // otherwise
+        alert("You don't get my cat's information");
+      }
+
+      // if petIsCat is true, then ...
+      if (petIsCat) {
+        alert("My pet is a cat");
+      }
+      else {
+        // otherwise
+        alert("My pet is not a cat");
+      }
+
+      // if petAge is not equal to 7, then...
+      if (petAge !== 7) {
+        alert("My pet is not 7 years old");
+      }
+
+      // if petAge is 5, then...
+      if (petAge === 5) {
+        alert("My pet is 5 years old");
+      }
+      // otherwise // if my petAge is less than 5, then...
+      else if (petAge < 5) {
+        alert("My pet is less than 5 years old");
+      }
+      else {
+        // otherwise
+        alert("My pet is older than 5 years old");
+      }
+
+      // prints our userName variable
+      alert("Welcome to our page " + userName);
+
+      // asks for the user input which is usually string (number... maybe)
+      var catAge = prompt("How old is your cat?");
+
+      // Won't work as expected
+      // "5" + 2 -> "52"
+      // parseInt("5") + 2 -> 7
+      alert(catAge + 2);
+
+      // Works as expected
+      alert(parseInt(catAge) + 2);
+
+    </script>
+  </body>
+</html>

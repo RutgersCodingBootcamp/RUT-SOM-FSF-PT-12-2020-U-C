@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Data Types, User Input, Conditional Logic - Uncommented
+    </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var userName = prompt("What's your name?"); // asking for the user's name and we get back a string (response)
+      var confirmCats = confirm("Do you like cats?"); // asking if the user likes cats and we get back a true/false
+
+      // stored values
+      var petName = "Meeses";
+      var petType = "Tuxedo Cat";
+      var petAge = 5;
+      var petIsCat = true;
+
+      // if confirmCats is true, it will print the 3 values petname pettype and petage
+      if (confirmCats) {
+        alert(petName + " " + petType + " " + petAge);
+      }
+      else {
+        // when confirmCats is false, it just a simple alert
+        alert("You don't get my cat's information");
+      }
+
+      // if petIsCat is true, then...
+      if (petIsCat) {
+        alert("My pet is a cat");
+      }
+      else {
+        // otherwise
+        alert("My pet is not a cat");
+      }
+
+      // testing the petAge if it is not 7
+      if (petAge !== 7) {
+        alert("My pet is not 7 years old");
+      }
+
+      // testing the petAge if it is equal to 5
+      if (petAge === 5) {
+        alert("My pet is 5 years old");
+      }
+      // otherwise // testing the petAge if it is less than 5
+      else if (petAge < 5) {
+        alert("My pet is less than 5 years old");
+      }
+      // otherwise
+      else {
+        alert("My pet is older than 5 years old");
+      }
+
+      alert("Welcome to our page " + userName);
+
+      var catAge = prompt("How old is your cat?");
+
+      // Won't work as expected
+      alert(catAge + 2);
+
+      // Works as expected
+      alert(parseInt(catAge) + 2);
+
+    </script>
+  </body>
+</html>
