@@ -10,6 +10,7 @@ if user selects paper and computer selects rock
 or        
 if user selects scissors and computer selects paper
     user wins
+    add 1 to the count of user wins
     alert user wins
 
 if computer selects rock and user selects scissors
@@ -18,7 +19,15 @@ if computer selects paper and user selects rock
 or        
 if computer selects scissors and user selects paper
     computer wins
+    add 1 to the count of computer wins
     alert computer wins
 
 otherwise
+    add 1 to the count of ties
     alert it is a tie
+
+ask "if you want to play again?"
+
+if they don't want to play again
+say "see ya later, here is the score"
+show the score
