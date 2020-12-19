@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // have to make choices
+        var userChoice;
+        var computerChoice;
+        var playAgain = true;
+        
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+        var possible = ['r','p','s'];
+
+        for( var i = 0; playAgain && i < 10; i++){
+            // the user gives either rock paper or scissor
+            userChoice = prompt("Please enter rock(r), paper(p) or scissors(s)");
+            if(userChoice === null){
+                //show error
+                alert("Error: you have an invalid utensil");
+            }
+            // makes sure it is lower case
+            userChoice = userChoice.toLowerCase();
+            if(userChoice.length > 1){
+                // we get the first letter
+                userChoice = userChoice[0];
+            }
+            if(!possible.includes(userChoice)){
+                // show error
+                alert("Error: you have an invalid utensil");
+            }
+            else{
+                // computer has to randomly choose rock paper or scissor
+                                        // 0, 1, or 2
+                computerChoice = possible[Math.floor(Math.random() * possible.length)];
+                console.log({computerChoice, userChoice});
+                // alert("good");
+
+                // if user selects rock and computer selects scissors
+                // or
+                // if user selects paper and computer selects rock
+                // or        
+                // if user selects scissors and computer selects paper
+                //     user wins
+                //     add 1 to the count of user wins
+                //     alert user wins
+                if( (userChoice === 'r' && computerChoice === 's')
+                    || (userChoice === 'p' && computerChoice === 'r')
+                    || (userChoice === 's' && computerChoice === 'p')){
+                    wins++; // adding 1
+                    alert("You won!");
+                }
+
+                // if computer selects rock and user selects scissors
+                // or
+                // if computer selects paper and user selects rock
+                // or        
+                // if computer selects scissors and user selects paper
+                //     computer wins
+                //     add 1 to the count of computer wins
+                //     alert computer wins
+                else if( (computerChoice === 'r' && userChoice === 's')
+                    || (computerChoice === 'p' && userChoice === 'r')
+                    || (computerChoice === 's' && userChoice === 'p')){
+                    losses++; // adding 1
+                    alert("You lost!");
+                }
+
+                // otherwise
+                //     add 1 to the count of ties
+                //     alert it is a tie
+                else{
+                    ties++;
+                    alert("Tie!");
+                }
+                console.log({wins, losses, ties});
+            }
+
+            // ask "if you want to play again?"
+            playAgain = confirm("Play again");
+        }
+
+        // if they don't want to play again
+        // say "see ya later, here is the score"
+        // show the score
+        alert("See ya later! Score: (wins: " + wins + ", losses: " + losses + ", ties: "+ ties+ ")")
+    </script>
+</body>
+</html>
