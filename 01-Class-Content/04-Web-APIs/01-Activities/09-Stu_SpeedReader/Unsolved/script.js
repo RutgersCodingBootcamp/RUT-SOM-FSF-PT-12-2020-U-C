@@ -7,3 +7,4 @@ function prepareRead() {
 function speedRead() {
   // Print words to the screen one at a time.
 }
+
