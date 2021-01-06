@@ -35,6 +35,9 @@
   ```js
   console.log(document.body.children[3].childNodes[7].parentElement.style.color = "red");
   ```
+  <p> The paragraph
+    <span> element here. </span>
+  </p>
 
 * Point out the following:
 
