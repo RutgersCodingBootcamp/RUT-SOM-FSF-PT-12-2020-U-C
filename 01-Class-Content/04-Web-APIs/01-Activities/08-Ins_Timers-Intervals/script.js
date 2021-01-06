@@ -7,8 +7,16 @@ function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+    // timeEl.style.fontSize = (40 - secondsLeft * 2) + "px";
+    // timeEl.style.display = "none";
+    // if(secondsLeft <= 3){
+    //   timeEl.style.display = "block";
+    // }
+
+    // console.log(secondsLeft);
 
     if(secondsLeft === 0) {
+      
       clearInterval(timerInterval);
       sendMessage();
     }
