@@ -14,13 +14,21 @@
       <h1>Tip Calculator</h1>
       <h4>Enter the total price of your meal below</h4>
       <form id="form">
-        <input id="total-bill" name="total-bill" placeholder="Total Bill" />
-        <input id="tip-percent" name="tip-percent" placeholder="Tip Percentage" />
+        <input id="total-bill" name="total-bill" placeholder="Total Bill" type="text" />
+        <input id="tip-percent" name="tip-percent" placeholder="Tip Percentage"  type="text" />
         <button id="submit">Calculate Tip</button>
       </form>
       <div>
         <h4>Tip amount: <span id="tip-amount"></span></h4>
         <h2>Total: <span id="new-total"></span></h2>
+        <br><br>
+      </div>
+      <form id="form">
+        <input id="num-people" name="num-people" placeholder="Number of People" type="text" />
+        <button id="split">Split Bill</button>
+      </form>
+      <div>
+        <h2>Total Per Person: <span id="total-per-person"></span></h2>
         <br><br>
       </div>
   </div>
