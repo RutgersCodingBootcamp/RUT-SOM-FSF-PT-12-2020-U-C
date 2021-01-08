@@ -14,6 +14,7 @@ var elements = [
 var typeface;
 
 typefaceEl.addEventListener("change", function(event) {
+  console.log(event.target);
   event.preventDefault();
   typeface = typefaceEl.value;
   document.querySelector(".container").style.fontFamily = typeface;

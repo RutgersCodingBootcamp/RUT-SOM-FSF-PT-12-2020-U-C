@@ -2,6 +2,8 @@
 // var poemArr = poem.split(" ");
 
 var questionIndex = 0;
+
+// array for the questions
 var questionArr = [
   {
     question: "Who controls the world?",
@@ -23,23 +25,26 @@ var questionArr = [
       "Ask Elon to buy you a new computer"
     ]
   }
-]
+];
 
 console.log(questionArr);
+
+// create some variables where our content will show up on the page.
 var containerTag = document.querySelector("#container");
 var timerTag = document.querySelector("#timer");
-// var time = prompt("How many milliseconds between words");
 
-function prepareRead() {
+// declared function that has the timer and will go the next step once at zero
+function prepareQuiz() {
   // Create the countdown timer.
   // console.log("running my prepare read timer");
-  
   var seconds = 3;
   var timerInterval = setInterval(function(){
     //  print the number of seconds
     console.log(seconds);
     //  should display on the page
     timerTag.textContent = seconds + " left until the poem starts";
+
+    // if the seconds timer gets to zero
     if(seconds === 0){
       // clear timer
       timerTag.textContent = " ";
@@ -112,6 +117,7 @@ function showNextQuestion() {
     seconds--;
   }, 1000);
 
+  
   for(var i = 0; i < questionArr[questionIndex].choices.length; i++){
     var choiceTag = document.createElement("li");
     choiceListTag.appendChild(choiceTag);
@@ -139,5 +145,5 @@ function showNextQuestion() {
   // }, time);
 }
 
-// calling my function prepareRead
-prepareRead();
+// calling my function prepareQuiz to show countdown to quiz
+prepareQuiz();
