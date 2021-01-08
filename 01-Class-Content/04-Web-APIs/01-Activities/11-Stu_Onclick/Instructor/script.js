@@ -23,6 +23,9 @@ decButton.addEventListener("click", function(event){
         // put count on the page
         countTag.textContent = count;
     }
+
+    // update decrement color
+    updateColor();
 });
 
 
@@ -36,4 +39,25 @@ incButton.addEventListener("click", function(event){
 
     // put count on the page
     countTag.textContent = count;
+
+    // update decrement color
+    updateColor();
 });
+
+// add eventlistener on mouse over to show red
+decButton.addEventListener("mouseover", function(){
+    
+    // update decrement color
+    updateColor();
+});
+
+function updateColor(){
+    // show red if count is 0 (change class to disabled)
+    if(count === 0){
+        decButton.setAttribute("class", "disabled");
+    }
+    // show the normal color (remove the class)
+    else{
+        decButton.setAttribute("class", null);
+    }
+}

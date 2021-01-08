@@ -16,3 +16,7 @@ button {
   background-color: #247BA0;
   color: white;
 }
+
+.disabled{
+  background-color: red;
+}
