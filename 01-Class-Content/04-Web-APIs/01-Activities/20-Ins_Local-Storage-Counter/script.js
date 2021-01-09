@@ -3,6 +3,7 @@ var addButton = document.querySelector("#add");
 var subtractButton = document.querySelector("#subtract");
 
 var count = localStorage.getItem("count");
+// var count = 0;
 
 counter.textContent = count;
 
