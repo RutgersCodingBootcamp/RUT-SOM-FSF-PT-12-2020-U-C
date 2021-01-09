@@ -31,6 +31,7 @@ function renderTodos() {
   }
 }
 todoList.addEventListener("click", function(event){
+  // delegation if the element isn't immediately on the page
   if(event.target.matches("button")){
     event.preventDefault();
     console.log(event.target);
