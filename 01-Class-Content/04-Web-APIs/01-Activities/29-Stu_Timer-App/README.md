@@ -20,7 +20,7 @@
 
 * **Part One** Create functions in `script.js` to add support for the following features:
 
-  1. Create a function that initializes the timer by taking the minutes input from the user and setting the `tototalSeconds` variable. Since we'll be using this function to reset as well, clear any existing intervals.
+  1. Create a function that initializes the timer by taking the minutes input from the user and setting the `totalSeconds` variable. Since we'll be using this function to reset as well, clear any existing intervals.
 
   2. When the timer starts, update the DOM every second to reflect the time left. It is recommended that you create separate functions to properly format the minutes and seconds.
 
