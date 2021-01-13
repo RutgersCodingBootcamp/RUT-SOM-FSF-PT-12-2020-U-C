@@ -25,14 +25,69 @@
     // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
     // It's useful to become familiar with now.
 
+    // need variables to keep track of count
+    var pbjCount = 0;
+    var grilledcheeseCount = 0;
+    var roastbeefCount = 0;
+
     $(document).ready(function() {
 
       // VARIABLES
       // ====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
+      var renderImage = function(src, alt){
+        // creates an image tag
+        var imageTag = $("<img>");
+        imageTag.attr("src", src);
+        imageTag.attr("alt", alt);
+        imageTag.attr("width", 100);
+        imageTag.attr("height", 100);
+        // replace html inside a parent of id image-div
+        $("#image-div").html(imageTag);
+      };
 
+      // add click handler on the h3
+      // show a message
+      // show the count of sandwiches eaten
+      // add an image to the image-div
+      $("#pbj").on("click", function(event){
+        console.log(event.target);
+        // show a message
+        alert("Peanuts butter jelly time!");
+        // increment counter
+        pbjCount++;
+        // show the number of sandwiches eaten
+        alert("You have eaten " + pbjCount + " pbj sandwiches");
+        // // creates an image tag
+        // var imageTag = $("<img>");
+        // imageTag.attr("src", "https://ctl.s6img.com/society6/img/dNtxxLwiSqjg-3VheOqULHIWFyk/w_700/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/7125014fd4694c1caacc449c76e3593e/~~/were-great-together-peanut-butter-jelly-prints.jpg?wait=0&attempt=0");
+        // imageTag.attr("alt", "peanut butter jelly");
+        // imageTag.attr("width", 100);
+        // imageTag.attr("height", 100);
+        // // replace html inside a parent of id image-div
+        // $("#image-div").html(imageTag);
+        renderImage("https://ctl.s6img.com/society6/img/dNtxxLwiSqjg-3VheOqULHIWFyk/w_700/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/7125014fd4694c1caacc449c76e3593e/~~/were-great-together-peanut-butter-jelly-prints.jpg?wait=0&attempt=0",
+        "Peanut butter jelly");
+      });
+      $("#grilledcheese").on("click", function(event){
+        console.log(event.target);
+        alert("Cheese me!!!");
+        grilledcheeseCount++;
+        alert("You have eaten " + grilledcheeseCount + " grilledcheese sandwiches");
+        renderImage("https://hips.hearstapps.com/hmg-prod/images/grilled-cheese-horizontal-jpg-1522266016.jpg",
+        "Grilled cheese sandwich");
+      });
+      $("#roastbeef").on("click", function(event){
+        console.log(event.target);
+        alert("Moo!");
+        roastbeefCount++;
+        alert("You have eaten " + roastbeefCount + " roastbeef sandwiches");
+        renderImage("https://www.cscassets.com/recipes/wide_cknew/wide_25336.jpg",
+        "Roast Beef sandwich");
+      });
 
+      
       // ...
 
       // FUNCTIONS
