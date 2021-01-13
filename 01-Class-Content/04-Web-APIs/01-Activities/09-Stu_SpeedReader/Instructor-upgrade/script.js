@@ -120,6 +120,7 @@ function showNextQuestion() {
   
   for(var i = 0; i < questionArr[questionIndex].choices.length; i++){
     var choiceTag = document.createElement("li");
+    
     choiceListTag.appendChild(choiceTag);
     choiceTag.textContent = questionArr[questionIndex].choices[i];
 
