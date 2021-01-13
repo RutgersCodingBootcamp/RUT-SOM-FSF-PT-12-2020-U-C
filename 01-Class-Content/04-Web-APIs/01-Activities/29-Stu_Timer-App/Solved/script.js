@@ -145,6 +145,7 @@ function toggleStatus(event) {
 function getTimePreferences() {
   /* Here we check to see if any preferences have
      been set in the local storage via "setTimePreferences()" */
+  // type conversion back to a usable object
   var preferences = JSON.parse(localStorage.getItem("preferences"));
 
   // If preferences have been set then use any value available
@@ -165,6 +166,7 @@ function getTimePreferences() {
 function setTimePreferences() {
   localStorage.setItem(
     "preferences",
+    // type conversion to string
     JSON.stringify({
       workMinutes: workMinutesInput.value.trim(),
       restMinutes: restMinutesInput.value.trim()
