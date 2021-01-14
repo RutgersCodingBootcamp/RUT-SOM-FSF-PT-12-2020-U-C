@@ -29,7 +29,11 @@ function startTimer(event) {
     // taking the minutes input from the user 
     // and setting the `totalSeconds` variable.
     // clear any existing intervals.
-    resetTimer();
+    if(!resetTimer()){
+      alert("You have to put in a number for minutes");
+      // exit immediately without running the code after this point
+      return;
+    }
   }
   isTimePaused = false;
 
@@ -68,14 +72,28 @@ function isWorking() {
 
 // clears and resets the time
 function resetTimer(){
+  
+
   if(isWorking()){
+    // if we don't have a valid time, return false;
+    if(isNaN(parseInt(workMinutesInput.value))){
+      // exit immediately without running the code after this point
+      return false;
+    }
+
     // 1. Create a function that initializes the timer by 
     // taking the minutes input from the user 
     // and setting the `totalSeconds` variable.
     totalSeconds = parseInt(workMinutesInput.value) * 60;
     showingWorkTime = true;
+    
   }
   else{
+    // if we don't have a valid time, return false;
+    if(isNaN(parseInt(restMinutesInput.value))){
+      // exit immediately without running the code after this point
+      return false;
+    }
     // use the rest input minutes
     totalSeconds = parseInt(restMinutesInput.value) * 60;
     showingWorkTime = false;
@@ -87,6 +105,9 @@ function resetTimer(){
   if(typeof interval !== 'undefined'){
     clearInterval(interval);
   }
+
+  // if we have a valid time, return true
+  return true;
 }
 
 // renders the time to the page
@@ -136,4 +157,27 @@ pauseButton.addEventListener("click", pauseTimer);
 stopButton.addEventListener("click", stopTimer);
 statusToggle.addEventListener("click", statusChanged);
 
+workMinutesInput.addEventListener("change", function(event){
+  console.log(event.target);
+  // every time we change work minutes, save it to storage
+  localStorage.setItem("work-minutes", workMinutesInput.value);
+});
+
+restMinutesInput.addEventListener("change", function(event){
+  console.log(event.target);
+  // every time we change rest minutes, save it to storage
+  
+  localStorage.setItem("rest-minutes", restMinutesInput.value);
+});
+
+// every time we load the page, get it from storage, if we have a value
+if(localStorage.getItem("work-minutes") !== null){
+  workMinutesInput.value = localStorage.getItem("work-minutes");
+}
+if(localStorage.getItem("rest-minutes") !== null){
+  restMinutesInput.value = localStorage.getItem("rest-minutes");
+}
+
+// resets and reloads timer
 statusChanged();
+
