@@ -151,7 +151,7 @@ function statusChanged(){
   renderTimer();
 }
 
-
+// all the event listeners that will listen for clicks
 playButton.addEventListener("click", startTimer);
 pauseButton.addEventListener("click", pauseTimer);
 stopButton.addEventListener("click", stopTimer);
@@ -166,7 +166,6 @@ workMinutesInput.addEventListener("change", function(event){
 restMinutesInput.addEventListener("change", function(event){
   console.log(event.target);
   // every time we change rest minutes, save it to storage
-  
   localStorage.setItem("rest-minutes", restMinutesInput.value);
 });
 
