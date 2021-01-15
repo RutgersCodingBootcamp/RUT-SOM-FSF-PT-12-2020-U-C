@@ -42,7 +42,7 @@
     var bob = function(){
       console.log(this);
     }
-    bob = bob.bind(cat);// binds the context variable
+    bob = bob.bind(cat);// binds the context variable ("this" becomes "cat")
     // print the cat object
 
 </script>
