@@ -201,3 +201,19 @@ if(localStorage.getItem("rest-minutes") !== null){
 // resets and reloads timer
 statusChanged();
 
+var listOfAnswers = document.querySelectorAll(".answer");
+for(var i = 0; i < listOfAnswers.length; i++){
+  listOfAnswers[i].addEventListener("click", function(event){
+    console.log(event.target);
+    var ans = event.target.value;
+    console.log(ans);
+    if(parseInt(ans) === 2){
+      alert("You win!");
+      resetTimer();
+    }
+    else{
+      secondsElapsed += 60;
+      renderTimer();
+    }
+  });
+}
