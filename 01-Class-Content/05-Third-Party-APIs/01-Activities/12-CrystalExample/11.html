@@ -37,6 +37,9 @@
   // Here we created code that selects a number either 10 or 11.
   // We'll set this number at the start of the "game".
   var numberOptions = [10, 11];
+  // Math.round(Math.random()) // 0 <= x < 1 // 0 or 1 
+  // x < 0.5 turns into 0 , x >= 0.5 turns into 1
+  // Math.floor(Math.random() * maxRange) + offset
   var increment = numberOptions[Math.round(Math.random())];
 
   $(".crystal-image").on("click", function() {

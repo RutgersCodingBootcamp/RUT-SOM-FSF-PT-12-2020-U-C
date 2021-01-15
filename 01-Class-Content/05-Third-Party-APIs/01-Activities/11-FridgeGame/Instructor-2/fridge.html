@@ -94,7 +94,8 @@
 
             // 7. Create an "on-click" event attached to the ".letter-button" class.
             $(".letter-button").on("click", function(event){
-                console.log(event.target);
+                // console.log(event.target);
+                console.log($(this).attr("data-letter"));
                 // Inside the on-click event...
 
                 // 8. Create a variable called "fridgeMagnet" and set the variable equal to a new div.
@@ -105,6 +106,7 @@
                     // 10. Then chain the following code onto the "fridgeMagnet" variable: .text($(this).attr("data-letter"))
                     .text($(this).attr("data-letter"));
                 
+
                 // 11. Lastly append the fridgeMagnet variable to the "#display" div (provided);
                 $("#display").append(fridgeMagnet);
 

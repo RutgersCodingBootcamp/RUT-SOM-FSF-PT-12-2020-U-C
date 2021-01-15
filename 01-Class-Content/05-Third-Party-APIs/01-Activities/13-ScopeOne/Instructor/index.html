@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope Activity #1</title>
+</head>
+<body>
+  <h1>Scope Activity #1</h1>
+  <h2>✨Open the console to see the magic!✨</h2>
+
+  <script>
+
+    function outside() {
+      // what is the scope of this variable? // from line 13-24
+      var x = 1;
+
+      // what is the scope of this function and the scope of y? // lines 18-21 // closure
+      function inside(y) {
+
+        console.log(x + y);
+      }
+
+      return inside;
+    }
+    // what is happening here? // functions is passed along but it will still have access to the x variable scope
+    // assigning the variable the value of the returned item from the outside function
+    var insideOut = outside();
+    console.log(insideOut);
+    // What does this return?
+    // 3
+    insideOut(2);
+
+    // Uncaught ReferenceError: x is not defined.
+    // How does insideOut have access to x?
+    console.log("The value of 'x' outside 'outside()' is: " + x);
+
+  </script>
+
+</body>
+</html>
