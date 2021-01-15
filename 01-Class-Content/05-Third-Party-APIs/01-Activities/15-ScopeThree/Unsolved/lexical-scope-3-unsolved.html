@@ -17,8 +17,8 @@
       alert("One: " + a);
     }
 
-    // What will get alerted?
-    one();
+    // What will get alerted? a is global
+    one(); // One: 1
 
     // Example Two: Local Scope
     // -------------------------------------------
@@ -31,8 +31,8 @@
       two(a);
     }
 
-    // What will get alerted?
-    twotop();
+    // What will get alerted? a is global
+    twotop(); // Two: 1
 
     // Example Three: Local Scope
     // -------------------------------------------
@@ -43,15 +43,15 @@
       alert("Three: " + a);
     }
 
-    // What will get alerted?
-    three();
+    // What will get alerted? local-scoped variables takes priority
+    three(); // Three: 3
 
     // Example Four: Local Scope
     // -------------------------------------------
-    function first() {
+    function first() { // lines 51 - 66
       var a = 5;
 
-      function second() {
+      function second() { // lines 54 - 62
         var a = 3;
 
         function third() {
@@ -68,6 +68,8 @@
 
     // What will get alerted?
     first();
+    // Four: 3
+    // Five: 5
 
   </script>
 </body>
