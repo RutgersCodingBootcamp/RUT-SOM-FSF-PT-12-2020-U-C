@@ -81,6 +81,20 @@ var oper = '';
 var result = '';
 
 $(document).ready(function() {
+  console.log(new Date());
+  var currDate = new Date();
+  currDate.getMonth();
+  
+  var months = ["January", "February", "March"];
+  
+  console.log(months[currDate.getMonth()]);
+  // "January" or current month
+  console.log(months[1]);
+  console.log(months[currDate.getMonth()] + " " + currDate.getDate());
+
+  console.log(currDate.getHours()) // military time for hours - 24 hour clock
+
+  // "February"
 
   // Your code here...
 
