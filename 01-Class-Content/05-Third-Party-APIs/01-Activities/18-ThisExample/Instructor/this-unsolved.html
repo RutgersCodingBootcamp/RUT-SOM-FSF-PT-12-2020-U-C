@@ -14,7 +14,7 @@
     // --------------------------------------------------
     // What is "this" going to print?
 
-    console.log(this)
+    console.log(this); // window
 
 
     // EXAMPLE TWO:
@@ -22,7 +22,7 @@
     // What is "this" going to print?
 
     function myFunction() {
-      console.log(this);
+      console.log(this); // window
     }
     myFunction();
 
@@ -32,8 +32,8 @@
 
     var someObj = {
       name: "Red Hat",
-      say: function() {
-        console.log(this.name);
+      say: function() { // assigns a property with the key "say" and a value of "function" , creates a key-value pair
+        console.log(this.name); // {name: "Red Hat", say: function...}
       }
     };
     someObj.say();
@@ -45,15 +45,19 @@
 
     var myObj = {
       name: "",
-      yell: function() {
+      yell: function() { // "this" = myObj (connected through a key-value pair)
         this.name = "Star Powerup";
 
-        var changeName = function(newName) {
+        var changeName = function(newName) { // "this" = window (no connection)
           this.name = newName;
         };
         changeName("Blue Shell");
         console.log(this);
-      }
+      },
+
+      // changeName: function(){ // "this" = myObj (connected through a key-value pair)
+
+      // }
     };
     myObj.yell();
 
@@ -64,14 +68,14 @@
 
     var myObj = {
       name: "",
-      yell: function() {
+      yell: function() { // "this" = myObj (connected to object via key-pair)
 
         // This line is important!
-        var thisObject = this;
+        var thisObject = this; // thisObject = myObj
 
         this.name = "Star Powerup";
-        var changeName = function(newName) {
-          thisObject.name = newName;
+        var changeName = function(newName) { // "this" = window (not connected)
+          thisObject.name = newName; // using a local scoped variable (myObj.name = newName)
         };
         changeName("Blue Shell");
         console.log(thisObject);
