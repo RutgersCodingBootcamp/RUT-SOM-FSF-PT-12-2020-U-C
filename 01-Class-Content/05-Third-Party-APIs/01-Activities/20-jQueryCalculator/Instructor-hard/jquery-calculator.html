@@ -85,6 +85,7 @@ $(document).ready(function() {
   // Your code here...
 
   function render(){
+    // translation object/table
     var operations = {
       power: "^",
       plus: "+",
@@ -92,6 +93,8 @@ $(document).ready(function() {
       times: "x",
       divide: "&#247;" // ÷
     };
+
+    // using tags on page and setting text and html
     $("#first-number").text(num1);
     $("#operator").html(operations[oper]);
     $("#second-number").text(num2);
@@ -158,6 +161,8 @@ $(document).ready(function() {
   $("#button-clear").on("click", function(event){
     console.log(this);
     console.log(event.target);
+
+    // clearing out values
     num1 = '';
     num2 = '';
     oper = '';
