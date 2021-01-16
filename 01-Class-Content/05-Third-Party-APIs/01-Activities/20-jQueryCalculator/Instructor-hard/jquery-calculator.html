@@ -85,8 +85,15 @@ $(document).ready(function() {
   // Your code here...
 
   function render(){
+    var operations = {
+      power: "^",
+      plus: "+",
+      minus: "-",
+      times: "x",
+      divide: "&#247;" // ÷
+    };
     $("#first-number").text(num1);
-    $("#operator").text(oper);
+    $("#operator").html(operations[oper]);
     $("#second-number").text(num2);
     $("#result").text(result);
   }
@@ -96,10 +103,12 @@ $(document).ready(function() {
     console.log(event.target);
     // need the operator to determine which number we are on
     if(oper.length > 0){
-      num2 = $(this).val();
+      // instead of setting it, we concatenate the new number
+      num2 += $(this).val();
     }
     else{
-      num1 = $(this).val();
+      // instead of setting it, we concatenate the new number
+      num1 += $(this).val();
     }
     
 
@@ -111,7 +120,7 @@ $(document).ready(function() {
   $(".operator").on("click", function(event){
     console.log(this);
     console.log(event.target);
-    // keeping track of operator
+
     oper = $(this).val();
     // always want to see what we are doing
     render();
