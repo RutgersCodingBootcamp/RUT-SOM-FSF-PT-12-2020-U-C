@@ -28,6 +28,7 @@ You will be employer-competitive if you are able to:
 * [Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 * [Learn Enough Git to Be Dangerous](https://www.learnenough.com/git-tutorial/getting_started)
 * [Powerpoint Link](https://docs.google.com/presentation/d/1mCsAsRtwjGncXqq17bIJUZGNV26wqjqeuhWTQvnoLa0/edit?usp=sharing)
+* [Gist List of Public APIs](https://github.com/n0shake/Public-APIs)
 
 - - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
