@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- The scope attribute specifies that this is a header for a column -->
+          <th scope="col">Movie Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Interstellar</td>
+          <td>2014</td>
+          <td>Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow</td>
+        </tr>
+        <!-- Insert additional movie rows here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // The below code fills in the first row of the table
+    var movie = "Mr. Nobody";
+
+    // create a function that takes in a movie and does an ajax request to fill in the table...
+    function ajaxMovie(movie){
+      // because we are using movie to get our data
+      // we have to create the query url every time inside this function
+      var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        window.responseTest = response;
+
+        // Create and save a reference to new empty table row
+        var tableRow = $("<tr>");
+        // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+        // var actorsTd = $("<td>");
+        // actorsTd.text(response.Actors);
+        // var titleTd = $("<td>");
+        // titleTd.text(response.Title);
+        // var yearTd = $("<td>");
+        // yearTd.text(response.Year);
+
+        // want to use a for loop here to make it easier to extend to more data keys
+        var dataParts = ["Title", "Year", "Actors"];
+        for(var jk = 0; jk < dataParts.length; jk++){
+          console.log(dataParts[jk]);
+          var td = $("<td>");
+          td.text(response[dataParts[jk]]);
+          tableRow.append(td);
+        }
+
+        // Append the td elements to the new table row
+        // tableRow.append(titleTd, yearTd, actorsTd);
+        // Append the table row to the tbody element
+        $('tbody').append(tableRow);
+      });
+    }
+
+    var movieList = ["Mr. Right", "Titanic", "Black Panther"];
+    // using our array to call ajaxMovie
+    for(var i = 0; i < movieList.length; i++){
+      ajaxMovie(movieList[i]);
+    }
+    // ajaxMovie(movie);
+    // ajaxMovie("Titanic");
+    // ajaxMovie("Black Panther");
+
+    // Repeat the above logic to add rows for two more movies of your choice
+
+    // BONUS: Once complete, try to make your code as DRY as possible through the use of functions
+  </script>
+</body>
+
+</html>
