@@ -11,13 +11,14 @@
   <script type="text/javascript">
     // Example queryURL for Giphy API
     var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=RANHjz2L1Drs7AUTUKTyWRWnP2iuiQpy";
+    var queryRandomUrl = "https://api.giphy.com/v1/gifs/random?api_key=RANHjz2L1Drs7AUTUKTyWRWnP2iuiQpy&tag=burrito"
 
     $.ajax({
-      url: queryURL,
+      url: queryRandomUrl,
       method: "GET"
     }).then(function(response) {
       console.log(response);
-      console.log(response.data[0].images.fixed_height.url);
+      // console.log(response.data[0].images.fixed_height.url);
     });
   </script>
 
