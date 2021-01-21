@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Magical Cat Button</title>
+</head>
+
+<body>
+  <button id="cat-button">magical cat button</button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // click event listener attaches to the id of "cat-button"
+    $("#cat-button").on("click", function() {
+
+      // just a url that contains our data with cat gifs in JSON format
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats&rating=pg";
+
+      // defines the request which will be sent
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      // defines the function that will handle the response from the service or server
+      // (when we see a "then" function, we are usually looking a promise based event handler)
+        .then(function(response) {
+
+          // creating a variable and giving it a value of image url from the response
+          var imageUrl = response.data.image_original_url;
+
+          // creating an image tag
+          var catImage = $("<img>");
+
+          // adding the src and alt attributes to the img tag
+          catImage.attr("src", imageUrl);
+          catImage.attr("alt", "cat image");
+
+          // assign a parent tag (#images) to the img tag
+          // putting the img tag on the page at #images
+          $("#images").prepend(catImage);
+        });
+    });
+  </script>
+</body>
+
+</html>
