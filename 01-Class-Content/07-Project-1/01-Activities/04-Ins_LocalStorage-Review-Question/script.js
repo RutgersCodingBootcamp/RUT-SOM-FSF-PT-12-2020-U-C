@@ -37,6 +37,8 @@ function renderList(){
         innerList += `<li>${animalList[i]}</li>`;
     }
     animalListTag.innerHTML = innerList;
+
+    
 }
 
 renderList();
