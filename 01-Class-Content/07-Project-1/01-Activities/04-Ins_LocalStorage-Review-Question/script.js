@@ -32,13 +32,13 @@ function renderList(){
         document.body.append(animalListTag);
     }
 
-    var innerList = "";
-    for(var i = 0; i < animalList.length; i++){
-        innerList += `<li>${animalList[i]}</li>`;
-    }
-    animalListTag.innerHTML = innerList;
+    // var innerList = "";
+    // for(var i = 0; i < animalList.length; i++){
+    //     innerList += `<li>${animalList[i]}</li>`;
+    // }
+    // animalListTag.innerHTML = innerList;
 
-    
+    animalListTag.innerHTML = animalList.map( single => `<li><h3>${single}</h3></li>`).join(" ");    
 }
 
 renderList();
