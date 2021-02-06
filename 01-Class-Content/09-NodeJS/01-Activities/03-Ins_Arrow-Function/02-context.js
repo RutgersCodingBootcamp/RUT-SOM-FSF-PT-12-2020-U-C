@@ -19,11 +19,12 @@ person.saySomething(); // prints "Hodor is thinking..."
 // i.e. whatever `this` is where it's created
 var person = {
   name: "Hodor",
+  saySomethingBroken: () => console.log(this.name + "!"),
   saySomething: function() {
     console.log(this.name + " is thinking...");
     setTimeout(() => console.log(this.name + "!"), 100);
   }
 };
-
+person.saySomethingBroken();
 person.saySomething(); // "Prints Hodor is thinking..."
 // prints `Hodor!` 100ms later
