@@ -11,7 +11,9 @@ console.log(originalArray);
 
 
 // TODO: Describe how map is working in the example below. What will the value of tripledArray be?
-const tripledArray = originalArray.map(data => data * 3);
+const tripledArray = originalArray.map(data => `<li>${data * 3}</li>`);
+
+console.log(tripledArray);
 
 // TODO: Describe how map is working in the example below. What will the value of oddOrEven be?
 const oddOrEven = originalArray.map(num => {
@@ -21,3 +23,8 @@ const oddOrEven = originalArray.map(num => {
     return 'odd'
   }
 });
+                                           // conditional ? trueValue : falseValue
+const oddOrEven2 = originalArray.map(num => num % 2 === 0 ? 'even' : 'odd');
+
+console.log(oddOrEven);
+console.log(oddOrEven2);
