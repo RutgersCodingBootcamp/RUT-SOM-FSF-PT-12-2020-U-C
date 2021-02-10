@@ -5,8 +5,10 @@ const arya = {
   allegiance: "House Stark"
 };
 
+const weirdFunction = () => 1;
+
 const greeting = `My name is ${arya.first}!
-I am loyal to ${arya.allegiance}.`;
+I am loyal to ${arya.allegiance}. ${weirdFunction()} + ${weirdFunction()}`;
 
 console.log(greeting); // prints
 // My name is Arya!
