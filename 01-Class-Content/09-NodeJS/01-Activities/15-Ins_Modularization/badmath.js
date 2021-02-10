@@ -8,5 +8,5 @@ const unpredictable = () => `Peter is ${Math.random()} * 1000`;
 module.exports = {
   pie,
   predictable,
-  unpredictable
+  peter: unpredictable
 };

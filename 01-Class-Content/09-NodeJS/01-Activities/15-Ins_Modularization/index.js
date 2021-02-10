@@ -4,4 +4,4 @@ console.log(badmath.pie);
 
 console.log(badmath.predictable());
 
-console.log(badmath.unpredictable());
+console.log(badmath.peter);
