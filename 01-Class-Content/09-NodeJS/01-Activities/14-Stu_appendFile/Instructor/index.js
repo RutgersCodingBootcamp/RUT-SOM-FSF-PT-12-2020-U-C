@@ -12,3 +12,4 @@ fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
   // if there is an err... console.error the error, otherwise "Commit logged!"
   err ? console.error(err) : console.log('Commit logged!')
 );
+// "It does go up when I stop writing code for power mode to continue the power mode"
