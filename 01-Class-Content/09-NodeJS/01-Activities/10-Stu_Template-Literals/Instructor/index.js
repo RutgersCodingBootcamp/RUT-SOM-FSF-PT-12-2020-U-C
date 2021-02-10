@@ -15,7 +15,7 @@ const songSnippet = `
     <ul>
       <li>artist: ${music.artist} </li>
       <li>title: ${music.title}</li>
-      <li>album: ${music.artist}</li>
+      <li>album: ${music.album}</li>
     </ul>
   </div>
 `;
