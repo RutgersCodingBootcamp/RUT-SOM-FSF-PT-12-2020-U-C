@@ -18,10 +18,10 @@ console.log(aryaParents); // prints `["Eddard Stark", "Catelyn Stark"]`
 
 // Now with ES6 object destructuring syntax, we can do this:
 
-const { name, parents } = arya;
+const { name:name1, parents } = arya;
 
-console.log(name); // prints `"Jaime Lannister"`
-console.log(parents); // prints `["Tywin Lannister", "Joanna Lannister"]`
+console.log(name1); // prints `"Arya Stark"`
+console.log(parents); // prints `['Eddard Stark', 'Catelyn Stark']`
 
 // We can also rename our destructured properties like so:
 
@@ -37,7 +37,7 @@ const logCharacter = (character) =>
 
 logCharacter(arya);
 
-// But now we can do this:
+// // But now we can do this:
 
 const betterLogCharacter = ({ name, parents }) =>
   console.log(`${name}'s parents are: ${parents[0]} and ${parents[1]}.`);
