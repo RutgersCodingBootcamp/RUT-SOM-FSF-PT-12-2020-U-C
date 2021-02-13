@@ -15,6 +15,7 @@ function PetAnimal(raining, noise) {
 // Sets the variables "dogs" and "cats" to be animal objects and initializes them with raining and noise properties
 const dogs = new PetAnimal(true, "Woof!");
 const cats = new PetAnimal(false, "Meow!");
+const ivanCat = new PetAnimal(true, "Bloop! Bloop!");
 
 // Calling dogs and cats makeNoise methods
 dogs.makeNoise(); // Woof
@@ -31,3 +32,5 @@ const massHysteria = (dogs, cats) => {
 };
 
 massHysteria(dogs, cats);
+
+ivanCat.makeNoise(); // Bloop! Bloop!
