@@ -25,12 +25,12 @@ cats.makeNoise(); //
 cats.raining = true;
 cats.makeNoise(); // Meow
 
-const massHysteria = (dogs, cats) => {
-  if (dogs.raining === true && cats.raining === true) {
-    console.log("DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!"); // "DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!"
+const massHysteria = (dogs, cats, roboCat) => {
+  if (dogs.raining === true && cats.raining === true && roboCat.raining === true) {
+    console.log("DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA! Bloop Bloop!"); // "DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!"
   }
 };
 
-massHysteria(dogs, cats);
+massHysteria(dogs, cats, ivanCat);
 
 ivanCat.makeNoise(); // Bloop! Bloop!
