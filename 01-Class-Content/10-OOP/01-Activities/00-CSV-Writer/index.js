@@ -1,5 +1,5 @@
 // goal 3 ask what the user wants for each field
-// goal 4 repeat it until they stop
+// goal 4 repeat it until they exit
 // goal 5 write it to file
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -41,9 +41,13 @@ function askFirstQuestions(){
         console.log(responses);
         let columnout = `"${col1}","${col2}"\n`;
         console.log(columnout);
-        fs.writeFile("out.csv", columnout, err =>{
-            if(err) console.error(err);
-        } );
+        saveFile(columnout);
     });
+}
+
+function saveFile(data){
+    fs.writeFile("output.csv", data, err =>{
+        if(err) console.error(err);
+    } );
 }
 askFirstQuestions();
