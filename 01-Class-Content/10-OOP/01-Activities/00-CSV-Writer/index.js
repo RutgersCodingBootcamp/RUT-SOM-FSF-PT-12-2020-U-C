@@ -5,6 +5,13 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 const csvQuestions = [];
+function UserQuestion(question, dataName){
+    this.message = question;
+    this.type = "input";
+    this.name = dataName;
+};
+let columnout;
+let fileData = "";
 // { 
 //    type: "input",
 //    message: "",
@@ -38,16 +45,69 @@ function askFirstQuestions(){
 
     ]).then( responses => {
         const {quest1, col1, quest2, col2} = responses;
-        console.log(responses);
-        let columnout = `"${col1}","${col2}"\n`;
-        console.log(columnout);
-        saveFile(columnout);
+        // console.log(responses);
+        columnout = `"${col1}","${col2}"\n`;
+        // console.log(columnout);
+        // saveFile(columnout);
+        let userQuestionsArr = [];
+
+        userQuestionsArr.push(new UserQuestion(quest1, "data1"));
+        userQuestionsArr.push(new UserQuestion(quest2, "data2"));
+        // userQuestionsArr.push({
+        //     type: "input",
+        //     message: quest1,
+        //     name: "data1"
+        // });
+
+        // userQuestionsArr.push({
+        //     type: "input",
+        //     message: quest2,
+        //     name: "data2"
+        // });
+        // console.log(userQuestionsArr);
+        askUserQuestions(userQuestionsArr);
     });
 }
+
+function askUserQuestions(userQuestionsArr){
+    inquirer.prompt(userQuestionsArr)
+    .then(responses => {
+        // console.log(responses);
+        const {data1, data2} = responses;
+        fileData += `"${data1}","${data2}"\n`;
+
+        // saveFile(columnout + fileData);
+
+        askUserIfDone(userQuestionsArr);
+    });
+}
+function askUserIfDone(userQuestionsArr){
+    inquirer.prompt([
+        {
+            type:"confirm",
+            message: "Are you done?",
+            name: "completed"
+        }
+    ])
+    .then(responses => {
+        // console.log(responses);
+        const {completed} = responses;
+        // if completed is true... save
+        if(completed){
+            saveFile(columnout + fileData);
+        }
+        else{
+            // else 
+            askUserQuestions(userQuestionsArr)
+        }
+    });
+}
+
 
 function saveFile(data){
     fs.writeFile("output.csv", data, err =>{
         if(err) console.error(err);
+        console.log("File Written");
     } );
 }
 askFirstQuestions();
