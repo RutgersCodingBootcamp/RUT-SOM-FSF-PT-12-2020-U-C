@@ -2,6 +2,7 @@ const Arithmetic = require("../arithmetic");
 
 describe("Arithmetic", () => {
   describe("Initialization", () => {
+
     it("should return an object containing a 'number' property when called with the 'new' keyword", () => {
       const obj = new Arithmetic();
 
@@ -67,6 +68,66 @@ describe("Arithmetic", () => {
       const result = obj.value();
 
       expect(result).toEqual(num);
+    });
+  });
+});
+
+describe("Extra paranoid suite of tests", () => {
+  describe("Multiply", () => {
+    it("should equal zero when you multiply by 0", () => {
+      // Setup
+      const num = 1623478;
+      const obj = new Arithmetic(num);
+
+      // Execute
+      const { number } = obj.multiply(0);
+
+      // Expect
+      expect(number).toEqual(0);
+
+      // Tear Down -- normally not there except with databases or files
+    });
+
+    it("should equal the same number when you multiply by 1", () => {
+      // Setup
+      const num = 1623478;
+      const obj = new Arithmetic(num);
+
+      // Execute
+      const { number } = obj.multiply(1);
+
+      // Expect
+      expect(number).toEqual(num);
+
+      // Tear Down -- normally not there except with databases or files
+    });
+    
+    it("should equal the same number when you dont have a parameter", () => {
+      // Setup
+      const num = 1623478;
+      const obj = new Arithmetic(num);
+
+      // Execute
+      const { number } = obj.multiply();
+
+      // Expect
+      expect(number).toEqual(num);
+
+      // Tear Down -- normally not there except with databases or files
+    });
+    it("should equal 55 when you multiply by 11 by 5", () => {
+      // Setup
+      const num = 11;
+      const obj = new Arithmetic(num);
+      const answer = 55;
+
+      // Execute
+      const { number } = obj.multiply(5);
+
+      // Expect
+      expect(number).toEqual(answer);
+
+      // Tear Down -- normally not there except with databases or files
     });
   });
 });

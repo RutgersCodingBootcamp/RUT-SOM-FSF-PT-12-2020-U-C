@@ -18,4 +18,8 @@ Arithmetic.prototype.value = function() {
   return this.number;
 };
 
+Arithmetic.prototype.multiply = function(num = 1){
+  const newNumber = this.number * num;
+  return new Arithmetic(newNumber);
+}
 module.exports = Arithmetic;
