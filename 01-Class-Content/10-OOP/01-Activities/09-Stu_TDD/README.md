@@ -14,9 +14,10 @@ In this activity you will write tests outlining the expected functionality for a
 
 * Write code to test each method:
 
-  * The `reverse` method should take a string as an argument and return a new reversed version of the string. e.g. "Hello" should return "elloH".
+  * The `reverse` method should take a string as an argument and return a new reversed version of the string. e.g. "Hello" should return "olleH".
 
-  * The `isPalindrome` method should take a string as an argument and return the boolean `true` if the provided string is a palindrome. A palindrome is a word that is the same backwards as it is forwards, e.g. "racecar". Return `false` is the string is not a palindrome.
+
+  * The `isPalindrome` method should take a string as an argument and return the boolean `true` if the provided string is a palindrome. A palindrome is a word that is the same backwards as it is forwards, e.g. "racecar". Return `false` if the string is not a palindrome.
 
   * The `capitalize` method should take a string as an argument and return a new string with the first letter of each word capitalized. e.g. "hello world!" should return "Hello World!".
 
