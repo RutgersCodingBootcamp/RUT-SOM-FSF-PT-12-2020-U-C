@@ -64,6 +64,10 @@ app.js         // Runs the application
   
   * `manager.html`
 
+// 1 function to ask the initial question of who you are creating
+// 1 function for each of the object types to create (3 all together)
+// after the questions of the current object are done, you call the initial question function
+
 * You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
 
 * The different employee types should all inherit some methods and properties from a base class of `Employee`.

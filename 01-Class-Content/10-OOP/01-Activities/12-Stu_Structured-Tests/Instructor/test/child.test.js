@@ -1,9 +1,16 @@
 const Child = require("../child");
 
+// describes the test suite
 describe("Child", () => {
+    // describes the test group
     describe("Initialization", () => {
         // * If `name` is not a string or `name` is an empty string, an error is thrown.
+        // This describes what we are testing and it usually includes the conditions as well
         it('if name is not a string, like -1, an error is thrown', () => {  
+            // Setup - create variables for the object/inputs/expected return value
+            // Execute - get the results by executing the function
+            // Expect - compare the expected to the results (usually using like "expect")
+            // Teardown
             expect( () => {
                 new Child();
             }).toThrow();
