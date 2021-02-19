@@ -11,7 +11,7 @@ TV.prototype.findActor = function(actor) {
   const URL = `http://api.tvmaze.com/search/people?q=${actor}`;
   
   // console.log(URL);
-  axios.get(URL).then(response => {
+  return axios.get(URL).then(response => {
     // went far enough, now we can use deconstructor
     // console.log(response.data[0].person);
 
