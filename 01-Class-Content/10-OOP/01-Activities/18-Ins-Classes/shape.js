@@ -9,8 +9,13 @@ class Shape {
     console.log(`Area: ${this.area}`);
     console.log(`Perimeter: ${this.perimeter}`);
   }
+
+  squareRootArea(){
+    console.log(`Sqrt Area: ${Math.sqrt(this.area)}`);
+  }
 }
 
 const shape = new Shape(25, 25);
 
 shape.printInfo();
+shape.squareRootArea();
