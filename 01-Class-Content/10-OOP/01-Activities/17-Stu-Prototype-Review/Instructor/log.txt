@@ -1,0 +1,24 @@
+Name: Jennifer Aniston
+
+Birthday: 1969-02-11
+
+Gender: Female
+
+Country: United States
+
+Maze Url: https://www.tvmaze.com/people/24483/jennifer-aniston
+
+-----------------
+
+Name: Ryan Reynolds
+
+Birthday: 1976-10-23
+
+Gender: Male
+
+Country: Canada
+
+Maze Url: https://www.tvmaze.com/people/45033/ryan-reynolds
+
+-----------------
+
