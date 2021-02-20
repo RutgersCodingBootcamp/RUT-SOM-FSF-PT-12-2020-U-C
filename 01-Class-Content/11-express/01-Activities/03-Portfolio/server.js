@@ -24,7 +24,8 @@ function handleRequest(req, res) {
 
   case "/portfolio":
     return displayPortfolio(res);
-
+  case "/ivans-restaurant":
+    return displayRestaurantMenu(res);
   default:
     return display404(path, res);
   }
@@ -58,10 +59,28 @@ function displayPortfolio(res) {
   res.end(myHTML);
 }
 
+function displayRestaurantMenu(res) {
+  var myHTML = `
+  <html>
+  <body>
+    <h1>The menu</h1>
+    <ul>
+      <li>Chicken Quesadillas $7.50</li>
+      <li>Eggs $17</li>
+    </ul>
+  </body>
+  </html>
+  `;
+
+  res.writeHead(200, { "Content-Type": "text/html" });
+
+  res.end(myHTML);
+}
+
 // When someone visits any path that is not specifically defined, this function is run.
 function display404(url, res) {
   var myHTML = "<html>" +
-    "<body><h1>404 Not Found </h1>" +
+    "<body><h1>404 Chicken Quesadillas </h1>" +
     "<p>The page you were looking for: " + url + " can not be found</p>" +
     "</body></html>";
 
