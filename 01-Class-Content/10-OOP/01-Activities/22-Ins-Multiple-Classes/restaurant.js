@@ -16,7 +16,7 @@ class Restaurant {
   }
 
   printRevenue() {
-    console.log(`${this.name} has made ${this.revenue} so far!`);
+    console.log(`${this.name} has made ${this.revenue.toFixed(2)} so far!`);
   }
 
   prepareOrders() {
@@ -39,7 +39,9 @@ const restaurant = new Restaurant("McJared's");
 const items = [
   new Item("Burger", 5.99),
   new Item("Soda", 3.5),
-  new Item("Chips", 2.0)
+  new Item("Chips", 2.0),
+  new Item("Eggs", 12),
+  new Item("Chicken Quesadilla", 7)
 ];
 
 const orders = items.map(item => new Order(item));
