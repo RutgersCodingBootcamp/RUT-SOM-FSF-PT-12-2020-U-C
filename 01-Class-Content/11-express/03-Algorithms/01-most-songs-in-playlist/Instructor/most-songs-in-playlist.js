@@ -7,6 +7,14 @@ var mostSongsInPlaylist = function(arr) {
   // need the sorted array so that we can look at the smaller songs first
   // 1 0 -1 are all valid return values for the sort function to determine sort order
   let sorted = arr.sort( (a, b) => a < b ? -1 : 1 );
+  // var sorted = arr.sort( function(a,b){
+  //   if(a < b){
+  //     return -1;
+  //   }
+  //   else{
+  //     return 1;
+  //   }
+  // });
   // keep track of the count
   let count = 0;
   // need to go through the array until ...
