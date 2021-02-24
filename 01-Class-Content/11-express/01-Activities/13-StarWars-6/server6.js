@@ -82,6 +82,9 @@ app.post("/api/characters", function(req, res) {
   res.json(newcharacter);
 });
 
+// app.put("..route", (req, res) => {})
+// app.delete("..route", (req, res) => {})
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
