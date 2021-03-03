@@ -29,6 +29,9 @@ function createProduct() {
       price: 3.0,
       quantity: 50
     },
+    /* 
+    INSERT INTO products SET flavor = "Rocky Road", price = 3.0, quantity = 50;
+    */
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " product inserted!\n");
@@ -53,6 +56,9 @@ function updateProduct() {
         flavor: "Rocky Road"
       }
     ],
+    /*
+    UPDATE products SET quantity = 100 WHERE flavor = "Rocky Road"
+    */
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " products updated!\n");
@@ -72,6 +78,9 @@ function deleteProduct() {
     {
       flavor: "strawberry"
     },
+    // use a select statement first to see how a delete statement should look,
+    // after I see the stuff I would like to delete, I will change "Select *" to "Delete"
+    // DELETE FROM products WHERE flavor = "strawberry"
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " products deleted!\n");

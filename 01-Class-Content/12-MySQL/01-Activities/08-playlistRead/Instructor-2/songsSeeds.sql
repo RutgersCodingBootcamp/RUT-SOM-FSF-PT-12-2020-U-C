@@ -20,5 +20,14 @@ INSERT songs (title, artist, genre)
 VALUES
 ("Purple Rain", "Artist Formerly Known as Prince", "Pop"),
 ("Kick Push", "Lupe Fiasco", "Hiphop");
+INSERT songs (title, artist, genre)
+VALUES
+("Crap", "Garbage", "Metal"),
+("Poo", "Trash", "Metal");
 
 SELECT * FROM songs;
+SELECT * FROM songs WHERE genre = "Pop";
+SELECT * FROM songs WHERE "Purple Rain" IN (artist, title, genre);
+
+-- SELECT * FROM songs WHERE title = "Crap" OR title = "Poo";
+DELETE FROM songs WHERE title = "Crap" OR title = "Poo";

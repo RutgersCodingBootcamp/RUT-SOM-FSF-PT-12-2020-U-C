@@ -9,3 +9,5 @@
 * HINT: Recall that you can create MySQL queries which include variables using question marks. Proper usage of this will help you quite a bit.
 
 * HINT: Remember to take into account the scope of Prompt/Promptly when putting your application together.
+
+* See my cheatsheet https://docs.google.com/presentation/d/14R_QCI0CIYdPO-xCPbmI2DZwtJoEdJlfiTx7gEcWF9E/edit?usp=sharing
