@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "rootroot",
   database: "ice_creamDB"
 });
 
@@ -21,9 +21,14 @@ connection.connect(function(err) {
 });
 
 function afterConnection() {
-  connection.query("SELECT * FROM products", function(err, res) {
+  connection.query("SELECT id AS icecream_id, flavor, price, quantity FROM products", function(err, res) {
     if (err) throw err;
     console.log(res);
     connection.end();
   });
+  // connection.query("SELECT * FROM products", function(err, res) {
+  //   if (err) throw err;
+  //   console.log(res);
+  //   connection.end();
+  // });
 }
