@@ -18,4 +18,7 @@ CREATE TABLE memorabilia (
 INSERT memorabilia(name, bid)
 VALUES ("kidney", 1);
 SELECT * FROM memorabilia;
+
+INSERT memorabilia SET name="cup", bid=2;
+
 -- baseball card, 50
