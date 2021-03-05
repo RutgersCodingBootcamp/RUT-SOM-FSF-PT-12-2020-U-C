@@ -11,3 +11,12 @@
 * BONUS: Create a `seeds.sql` file that contains the data for the first three songs found within `TopSongs.csv`
 
 * BONUS: Look into how MySQL Workbench can import and export data files. What file types does it accept? How does it convert the data?
+
+
+CREATE DATABASE (seed or schema?) schema
+
+CREATE TABLE (seed or schema?) schema
+
+INSERT into table_name (seed or schema?)  seed
+
+
