@@ -20,7 +20,7 @@ CREATE TABLE top1000songs (
 CREATE TABLE top_albums (
   position INT NOT NULL,
   artist VARCHAR(100) NULL,
-  song VARCHAR(100) NULL,
+  album VARCHAR(100) NULL,
   year INT NULL,
   raw_total DECIMAL(10,4) NULL,
   raw_usa DECIMAL(10,4) NULL,
@@ -48,3 +48,6 @@ SELECT * FROM top1000songs;
 SELECT * FROM top_albums;
 
 SELECT * FROM top_songs;
+
+-- this will rename a column
+-- ALTER TABLE top_albums RENAME COLUMN song TO album;
