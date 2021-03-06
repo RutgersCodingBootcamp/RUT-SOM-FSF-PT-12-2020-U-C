@@ -1,0 +1,95 @@
+<h1>Day Planner</h1>
+
+<ul>
+  {{#each plans}}
+  <li>
+    <p>
+      {{this.id}}. {{this.plan}}
+
+      <button data-planid="{{this.id}}" class="delplan">Delete Plan!</button>
+    </p>
+  </li>
+  {{/each}}
+</ul>
+
+<h2>Create a Plan</h2>
+<form id="createplan" class="button-size">
+  <textarea type="text" name="plan"></textarea>
+  <button type="submit">Save Plan!</button>
+</form>
+
+<h2>Update a Plan</h2>
+<form id="updateplan" class="button-size">
+  <select name="id">
+		{{#each plans}}
+			<option value="{{this.id}}">{{this.plan}}</option>
+		{{/each}}
+	</select>
+  <textarea type="text" name="plan" placeholder="plan"></textarea>
+  <button type="submit">Update Plan!</button>
+</form>
+
+<script type="text/javascript">
+  $(".delplan").on("click", function(event) {
+    // Get the ID from the button.
+    // This is shorthand for $(this).attr("data-planid")
+    var id = $(this).data("planid");
+
+    // Send the DELETE request.
+    $.ajax("/api/plans/" + id, {
+      type: "DELETE"
+    }).then(
+      function() {
+        console.log("deleted id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  $("#createplan").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    // [name=plan] will find an element with a "name" attribute equal to the string "plan"
+    var newPlan = {
+      plan: $("#createplan [name=plan]").val().trim()
+    };
+
+    // Send the POST request.
+    $.ajax("/api/plans", {
+      type: "POST",
+      data: newPlan
+    }).then(
+      function() {
+        console.log("created new plan");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  $("#updateplan").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    // Get the ID by finding an element with a "name" attribute equal to the string "id"
+    var id = $("[name=id]").val().trim();
+
+    var updatedPlan = {
+      plan: $("#updateplan [name=plan]").val().trim()
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/plans/" + id, {
+      type: "PUT",
+      data: updatedPlan
+    }).then(
+      function() {
+        console.log("updated id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+</script>
