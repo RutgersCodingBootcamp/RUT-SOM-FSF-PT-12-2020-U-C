@@ -12,7 +12,7 @@ var app = express();
 // What routes do you need to have? Which ones are optional?
 // TODO Add your routes here
 // this will match my url /api/math/add/1/1 for add 1 + 1
-app.get("/api/math/:operation/:num1/:num2", function(req, res) {
+app.get("/api/math/:operation/:num1original/:num2original", function(req, res) {
   // let operation = req.params.operation;
   // let num1 = req.params.num1;
   // let num2 = req.params.num2;
@@ -20,6 +20,10 @@ app.get("/api/math/:operation/:num1/:num2", function(req, res) {
   let {operation, num1, num2} = req.params;
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
+  
+  // let {operation, num1original, num2original} = req.params;
+  // let [num1, num2] = [num1original, num2original].map( v => parseFloat(v));
+  
 
   // TODO parse out the variables from the request
   // Parameters are received from the URL
