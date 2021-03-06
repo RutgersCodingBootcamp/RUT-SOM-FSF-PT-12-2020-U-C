@@ -1,5 +1,6 @@
 // Dependencies
 var express = require("express");
+// handlebars middleware that is imported
 var exphbs = require("express-handlebars");
 
 // Create an instance of the express app.
@@ -19,17 +20,30 @@ var lunches = [
     lunch: "Beet & Goat Cheese Salad with minestrone soup."
   }, {
     lunch: "Pizza, two double veggie burgers, fries with a Big Gulp"
+  },
+  {
+    lunch: "Chicken Ceasar"
   }
 ];
 
 // Routes
 app.get("/weekday", function(req, res) {
   res.render("index", lunches[0]);
+  // {
+  //   lunch: "Beet & Goat Cheese Salad with minestrone soup."
+  // }
 });
 
 app.get("/weekend", function(req, res) {
   res.render("index", lunches[1]);
+  // {
+  //   lunch: "Pizza, two double veggie burgers, fries with a Big Gulp"
+  // }
 });
+
+app.get("/rabiah", function(req, res){
+  res.render("index", lunches[2]);
+})
 
 app.get("/lunches", function(req, res) {
   res.render("all-lunches", {
