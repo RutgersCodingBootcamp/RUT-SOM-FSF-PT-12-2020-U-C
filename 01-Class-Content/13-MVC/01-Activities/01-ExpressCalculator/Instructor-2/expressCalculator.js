@@ -68,6 +68,7 @@ app.get("/api/math-bonus/:operation/:num1/:num2", function(req, res) {
   num2 = parseFloat(num2);
   // you have to decode the special character before continuing
   operation = decodeURIComponent(operation);
+  // eval is not recommended for routes, but you should know how to change it back to a switch to make routes safer
   res.send(eval(`${num1} ${operation} ${num2}`).toString());
   // res.send(eval(`${num1} ${operation} ${num2}`));
 });
