@@ -19,7 +19,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "rootroot",
   database: "task_saver_db"
 });
 
@@ -58,9 +58,12 @@ app.post("/", function(req, res) {
   // When using the MySQL package, we'd use ?s in place of any values to be inserted, which are then swapped out with corresponding elements in the array
   // This helps us avoid an exploit known as SQL injection which we'd be open to if we used string concatenation
   // https://en.wikipedia.org/wiki/SQL_injection
+  // var userInput = "\"; DROP DATABASE task_saver; \"";
+  // var dangerousConcat = "INSERT INTO tasks (tasks) VALUES (\"" + userInput + "\")";
   connection.query("INSERT INTO tasks (task) VALUES (?)", [req.body.task], function(err, result) {
     if (err) throw err;
 
+    // tells the browser to go back to the homepage
     res.redirect("/");
   });
 });
