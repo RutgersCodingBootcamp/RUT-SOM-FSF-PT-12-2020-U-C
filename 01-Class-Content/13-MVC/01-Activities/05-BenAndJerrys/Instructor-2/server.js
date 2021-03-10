@@ -37,9 +37,10 @@ app.get("/icecream/:name", (req, res) => {
 });
 
 app.get("/icecreams", (req, res) => {
-    res.render("all-icecreams", {
-        oops: icecreams
-    });
+    // res.render("all-icecreams", {
+    //     oops: icecreams
+    // });
+    res.render("all-icecreams", {icecreams});
 });
 
 app.listen(PORT, () => {
