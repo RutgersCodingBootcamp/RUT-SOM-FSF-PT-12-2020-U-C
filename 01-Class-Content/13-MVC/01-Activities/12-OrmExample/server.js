@@ -8,3 +8,7 @@ orm.selectWhere("pets", "animal_name", "Jake");
 
 // Find the buyer with the most pets.
 orm.findWhoHasMost("buyer_name", "buyer_id", "buyers", "pets");
+
+orm.searchColumn("buyers", "buyer_name", "Kevon");
+
+orm.searchColumn("pets", "animal_breed", "l");

@@ -28,7 +28,7 @@ var orm = {
     var queryString =
       "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
     // SELECT buyer_name, COUNT(buyer_name) AS count FROM buyers LEFT JOIN pets ON pets.buyer_id= buyers.id GROUP BY buyer_name ORDER BY count DESC LIMIT 1"
-    
+
     connection.query(
       queryString,
       [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
@@ -37,6 +37,13 @@ var orm = {
         console.log(result);
       }
     );
+  },
+  searchColumn: function(table, tableCol, searchTerm){
+    var queryString = "SELECT * FROM ?? WHERE ?? REGEXP ?";
+    connection.query(queryString, [table, tableCol, searchTerm], (err, result) => {
+      if(err) throw err;
+      console.log(result);
+    });
   }
 };
 
