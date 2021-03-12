@@ -42,7 +42,7 @@ app.get("/", function(req, res) {
     }
     // errors ???
     // render???
-    res.render("index", results);
+    res.render("index", { quotes: results });
   });
 });
 
