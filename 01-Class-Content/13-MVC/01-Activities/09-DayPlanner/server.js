@@ -1,6 +1,8 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
 var mysql = require("mysql");
+// MEHN stack
+// MERN stack (handlebars -> react)
 
 var app = express();
 
@@ -19,7 +21,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "rootroot",
   database: "day_planner_db"
 });
 
@@ -51,13 +53,20 @@ app.post("/api/plans", function(req, res) {
     }
 
     // Send back the ID of the new plan
-    res.json({ id: result.insertId });
+    console.log(result);
+    // res.json({ id: result.insertId });
+    res.end(JSON.stringify({ id: result.insertId }));
     console.log({ id: result.insertId });
   });
 });
 
+app.get("/test/response", function(req, res){
+  res.json({id: 4});
+});
+
 // Update a plan
 app.put("/api/plans/:id", function(req, res) {
+                                          //0            1    0              1
   connection.query("UPDATE plans SET plan = ? WHERE id = ?", [req.body.plan, req.params.id], function(err, result) {
     if (err) {
       // If an error occurred, send a generic server failure
