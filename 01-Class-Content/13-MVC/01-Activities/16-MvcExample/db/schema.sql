@@ -10,3 +10,11 @@ CREATE TABLE cats
 	sleepy BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
+CREATE TABLE dogs
+(
+	id int NOT NULL AUTO_INCREMENT,
+	name varchar(255) NOT NULL,
+	sleepy BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+);
