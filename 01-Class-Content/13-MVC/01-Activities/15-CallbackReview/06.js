@@ -12,7 +12,9 @@ var multiply = function(numOne, numTwo) {
 
 var anythingGoes = function(functionOne, functionTwo, functionThree) {
   functionThree(functionOne(3, 4), functionTwo(7, 2));
+
+  // return undefined
 };
 
 // Challenge: what does this return?
-anythingGoes(multiply, subtract, sum);
+console.log(anythingGoes(multiply, subtract, sum));
