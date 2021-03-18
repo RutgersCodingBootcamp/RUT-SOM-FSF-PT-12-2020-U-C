@@ -13,8 +13,6 @@ module.exports = function(app) {
 
   // Get all chirps
 
-
   // Add a chirp
-
 
 };

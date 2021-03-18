@@ -58,7 +58,7 @@ const Country = sequelize.define('Country', {
   },
   capital: {
     type: DataTypes.STRING,
-    allowNull, false
+    allowNull: false
   },
   independence_year: {
       type: DataTypes.INTEGER
