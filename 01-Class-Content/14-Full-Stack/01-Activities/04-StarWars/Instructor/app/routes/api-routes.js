@@ -76,9 +76,11 @@ module.exports = function(app) {
     Character.create(character)
     .then( result => {
       console.log(result);
+      res.json(result.dataValues);
     })
     .catch( error => {
       console.log(error);
+      res.status(400);
     });
 
     // // Take the request...
