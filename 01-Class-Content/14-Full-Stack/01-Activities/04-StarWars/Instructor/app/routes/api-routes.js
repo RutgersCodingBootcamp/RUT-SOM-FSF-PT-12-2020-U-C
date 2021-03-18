@@ -69,6 +69,17 @@ module.exports = function(app) {
 
   // If a user sends data to add a new character...
   app.post("/api/new", function(req, res) {
+    const character = req.body;
+    console.log(character);
+    // create our route
+    character.routeName = character.name.trim().replace(/\s+/g, "-").toLowerCase();
+    Character.create(character)
+    .then( result => {
+      console.log(result);
+    })
+    .catch( error => {
+      console.log(error);
+    });
 
     // // Take the request...
     // var character = req.body;
