@@ -32,6 +32,8 @@ module.exports = function(app) {
       // We have access to the new todo as an argument inside of the callback function
       res.json(dbTodo);
     }).catch(function(err){
+      
+      // throw back error with a status code
       res.status(400).json(err);
     });
 
@@ -67,6 +69,7 @@ module.exports = function(app) {
       .then(function(dbTodo) {
         res.json(dbTodo);
       }).catch(function(err){
+        // throw back error with a status code
         res.status(400).json(err);
       });
 
