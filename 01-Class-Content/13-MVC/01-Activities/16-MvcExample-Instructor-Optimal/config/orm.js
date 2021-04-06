@@ -25,7 +25,7 @@ let orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of values would be {name: panther, sleepy: true}
   update: function(table, values, condition, cb) {
     let queryString = "UPDATE ?? SET ? WHERE ?";
 
