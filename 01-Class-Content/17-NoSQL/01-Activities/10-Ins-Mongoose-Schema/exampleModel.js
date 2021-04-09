@@ -17,6 +17,13 @@ const ExampleSchema = new Schema({
   email: {
     type: String,
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    // /./ => means any character will match
+    // /.+/ => need at least 1 of any character
+    // /@/ => @
+    // /.+@/ => stuff@
+    // /.+@.+/ => stuff@stuff
+    // /.+@.+\./ => stuff@stuff.
+    // /.+@.+\..+/ => stuff@stuff.com
   },
 
   boolean: Boolean,
@@ -30,7 +37,11 @@ const ExampleSchema = new Schema({
 
   longstring: {
     type: String,
-    validate: [({ length }) => length >= 6, "Longstring should be longer."]
+    validate: [
+      // left side is a true/false function, right side is the error when it is false
+      ({ length }) => length >= 6, "Longstring should be longer.",
+      ({ length }) => length < 256, "Your string is too long."
+    ]
   }
 });
 
