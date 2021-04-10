@@ -7,9 +7,11 @@ const LibrarySchema = new Schema({
     type: String,
     unique: true
   },
-  books: [
-    {
+  books: [ // an array or list
+    { // an object
+      // type specifies the type of data
       type: Schema.Types.ObjectId,
+      // referenced Model name
       ref: "Book"
     }
   ]

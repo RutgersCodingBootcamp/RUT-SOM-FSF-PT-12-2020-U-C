@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate2", { useNewUrlParser: true });
 
 db.Library.create({ name: "Campus Library" })
   .then(dbLibrary => {
@@ -26,8 +26,12 @@ db.Library.create({ name: "Campus Library" })
   });
 
 app.post("/submit", ({body}, res) => {
+  // creating the book
   db.Book.create(body)
+    // adding the book id to the library - new:true will force the return of the modified document
     .then(({_id}) => db.Library.findOneAndUpdate({}, { $push: { books: _id } }, { new: true }))
+
+    // we now have the library with the new book id
     .then(dbLibrary => {
       res.json(dbLibrary);
     })
