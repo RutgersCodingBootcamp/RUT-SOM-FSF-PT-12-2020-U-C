@@ -27,6 +27,7 @@
         const transaction = db.transaction(["toDoList"], "readwrite");
         const toDoListStore = transaction.objectStore("toDoList");
         const statusIndex = toDoListStore.index("statusIndex");
+        // const toDoList = { statusIndex: {???} }
   
         // Adds data to our objectStore
         toDoListStore.add({ listID: "1", status: "complete" });
@@ -34,13 +35,13 @@
         toDoListStore.add({ listID: "3", status: "complete" });
         toDoListStore.add({ listID: "4", status: "backlog" });
        
-        // Return an item by keyPath
-        const getRequest = toDoListStore.get("1");
+        // Return an item by keyPath - the keyPath name is listID, so it will look for listID: "1"
+        const getRequest = toDoListStore.get("4");
         getRequest.onsuccess = () => {
           console.log(getRequest.result);
         };
 
-        // Return an item by index
+        // Return an item by index - the keyPath name is status, so it will look for status: "complete"
         const getRequestIdx = statusIndex.getAll("complete");
         getRequestIdx.onsuccess = () => {
           console.log(getRequestIdx.result); 
