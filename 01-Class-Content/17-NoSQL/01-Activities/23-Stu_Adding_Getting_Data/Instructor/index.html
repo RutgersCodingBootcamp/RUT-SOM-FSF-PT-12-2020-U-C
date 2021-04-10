@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adding and Getting Data</title>
+  </head>
+
+  <body>
+    <h1>Open Your Developer Tools > Application > IndexedDB</h1>
+    <script>
+      const request = window.indexedDB.open("toDoList", 1);
+      
+      request.onupgradeneeded = event => {
+        const db = event.target.result;
+
+        // * Create a `toDoList` object store with a `listID` keyPath that can be used to query on.
+        const toDoListStore = db.createObjectStore("toDoList", {keyPath: "listID"}); // similar to collection but almost always a partial sync
+        // * Create an index for a "column" you'd like to query on. ie: due-date
+        const dueDateIndex = toDoListStore.createIndex("dueDateIndex", "dueDate"); // what you will filter by
+        // const toDoListStore = { dueDateIndex: {???}}
+      }
+
+      
+      request.onsuccess = () => {
+        const db = request.result;
+        // * Create variables for a new `transaction` on your database, `objectStore` and the `index` you created.
+        // transaction - created
+        const transaction = db.transaction(["toDoList"], "readwrite");
+        // store - retrieved
+        const toDoListStore = transaction.objectStore("toDoList");
+        // index - retrieved
+        const dueDateIndex = toDoListStore.index("dueDateIndex");
+
+        console.log(dueDateIndex);
+
+        // * Add four new items to your object store with the `add` method.
+        toDoListStore.add({name: "homework", listID: 1, dueDate: "Today"});
+        toDoListStore.add({name: "super quantum computer by peter", listID: 2, dueDate: "Today and not due Today, we will read it later"});
+        toDoListStore.add({name: "a baby", listID: 3, dueDate: "9 months"});
+        toDoListStore.add({name: "vaccination of everyone on the planet", listID: 4, dueDate: "3 months"});
+        toDoListStore.add({name: "yoga pose", listID: 5, dueDate: "Now"});
+
+        // * Using the `get` method, return an item from your object store.
+        const doc1 = toDoListStore.get(5);
+        console.log(doc1);
+
+        // * Using the `getAll` method, query by index and return all items.
+        const doc2 = dueDateIndex.getAll("Today");
+        console.log(doc2);
+      };
+
+
+
+    </script>
+  </body>
+</html>
