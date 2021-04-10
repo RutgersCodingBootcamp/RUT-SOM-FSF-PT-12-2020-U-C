@@ -9,20 +9,26 @@
   <body>
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
+      // creates the database in indexDB
       const request = window.indexedDB.open("toDoList", 1);
 
+      // will do something if the database needs updating or is missing
       request.onupgradeneeded = ({ target }) => {
+        // retrieves a db object
         const db = target.result;
 
+        // create the store
+        // const toDoList = {}
         const objectStore = db.createObjectStore("toDoList");
+        // create indexes within the store
+        // const toDoList = {timestamp: {}, icebox: {}, inprogress: {}, complete: {}}
         objectStore.createIndex("timestamp", "timestamp");
-        // const toDoList = {// this is store
-        //   timestamp: { // this is the index inside the store
-
-        //   }
-        // };
+        objectStore.createIndex("icebox", "icebox");
+        objectStore.createIndex("inprogress", "inprogress");
+        objectStore.createIndex("complete", "complete");
       };
 
+      // will console.log when the request is finished
       request.onsuccess = event => {
         console.log(request.result);
       };
