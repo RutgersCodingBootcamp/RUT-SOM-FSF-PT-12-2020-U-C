@@ -19,8 +19,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/custommethods",
 
 app.post("/submit", ({ body }, res) => {
   const user = new User(body);
-  user.coolifier();
+  // user.coolifier();
   user.makeCool();
+  user.takeTheDogOut();
 
   User.create(user)
     .then(dbUser => {

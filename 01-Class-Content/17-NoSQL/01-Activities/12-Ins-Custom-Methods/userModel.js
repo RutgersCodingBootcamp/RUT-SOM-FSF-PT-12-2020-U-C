@@ -43,6 +43,11 @@ UserSchema.methods.makeCool = function() {
   return this.isCool;
 };
 
+UserSchema.methods.takeTheDogOut = function(){
+  this.email = this.email.replace("dog", "cat");
+  return this.email;
+};
+
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
