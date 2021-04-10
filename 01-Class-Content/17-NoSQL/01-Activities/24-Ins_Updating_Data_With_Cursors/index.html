@@ -37,14 +37,14 @@
         toDoListStore.add({ listID: "4", status: "backlog" });
         
         // Opens a Cursor request and iterates over the documents.
-        const getCursorRequest = toDoListStore.openCursor();
+        const getCursorRequest = toDoListStore.openCursor(); // i want to go through each line
         getCursorRequest.onsuccess = e => {
           const cursor = e.target.result;
           if (cursor) {
             console.log(cursor.value);
-            cursor.continue();
+            cursor.continue(); // go to the next line
           } else {
-            console.log("No documents left!");
+            console.log("No documents left!"); // cursor automatically stops... no more records are printed
           }
         };
       };

@@ -40,6 +40,15 @@
         const getCursorRequest = toDoListStore.openCursor();
         getCursorRequest.onsuccess = e => {
           // CODE HERE
+          // finding the cursor
+          const cursor = e.target.result;
+          if(cursor){ // will be defined if we have a value
+            console.log(cursor.value); // print value
+            cursor.continue(); // oh, I have to continue to the next line after this function...
+          }
+          else{
+            console.log("We can stop now because cursor is undefined");
+          }
         };
       };
     </script>
