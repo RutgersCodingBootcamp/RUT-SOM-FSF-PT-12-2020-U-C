@@ -1,0 +1,1 @@
+console.log("this is my service pineapple (service worker)");
