@@ -1,0 +1,51 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.a6f10f883280c3a010d555f9922b4424.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.41f255429ba4a31036663514526fed4f.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.f7b06676cf2593925d0838ff5758b0df.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_152x152.f49f915d2fbdf1285419fd1adb2a9861.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_144x144.f949d3c349e6369b94a28a269246f4ff.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.313c05cdb6e221b55ee7fd92c7832d14.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.e54bb49eb5cdedc4680bfe4c0edd8222.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_72x72.db197f35e653bfd4bf2904b8773763e6.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "name": "Images App",
+  "short_name": "Images App",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

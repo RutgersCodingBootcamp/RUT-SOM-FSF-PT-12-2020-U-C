@@ -9,6 +9,7 @@ const submitBtn = document.getElementById("submit");
 const resetBtn = document.getElementById("reset");
 
 const expenseChart = require("./expenseChart");
+const somenewmod = require("somenewmod");
 
 function updateChart(name, price) {
   expenseChart.data.labels.push(name);
