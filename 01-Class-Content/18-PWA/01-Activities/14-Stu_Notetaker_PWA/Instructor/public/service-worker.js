@@ -63,8 +63,8 @@ self.addEventListener("fetch", function (evt) {
     console.log("got here");
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
-        var init = { "status" : 200 , "statusText" : "stuff", "body": "Things are always broken."};
-        return new Response(null, init);
+        var init = { "status" : 200 , "statusText" : "OK"};
+        return new Response("<html><body><img src='https://i.ytimg.com/vi/0-cmcLdc104/hqdefault.jpg'/></body></html>", init);
         // return fetch(evt.request)
         //   .then(response => {
         //     if (response.status === 200) {
