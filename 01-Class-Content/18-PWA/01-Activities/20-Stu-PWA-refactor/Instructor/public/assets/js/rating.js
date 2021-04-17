@@ -1,6 +1,7 @@
 import {createEl} from "./util.js";
 import {loadImages} from "./images.js";
 
+// all functions related to ratings
 export function createRatingForm(image) {
     const labelText = {
       1: "One Star",

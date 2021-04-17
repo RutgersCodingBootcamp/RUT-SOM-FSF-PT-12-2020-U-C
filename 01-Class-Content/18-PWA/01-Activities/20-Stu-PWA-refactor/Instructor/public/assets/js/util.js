@@ -1,3 +1,5 @@
+
+// all general functions
 export function createEl(htmlString = "", className) {
     const el = document.createElement(htmlString);
     if (className) {

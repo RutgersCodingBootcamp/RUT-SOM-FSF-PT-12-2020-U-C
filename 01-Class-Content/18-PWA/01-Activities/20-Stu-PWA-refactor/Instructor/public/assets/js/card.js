@@ -1,5 +1,7 @@
 import {createEl} from "./util.js";
 import {createRatingForm} from "./rating.js";
+
+// all functions related to cards
 export function createCards(data) {
     console.log(document.getElementsByClassName("container"));
     const container = document.getElementsByClassName("container")[0];
