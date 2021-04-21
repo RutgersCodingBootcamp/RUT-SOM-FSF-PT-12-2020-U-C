@@ -31,18 +31,6 @@ THEN that will be shown on the page, and added to their transaction history when
 
 - - -
 
-```
-// if online,
-//    we should read the entire transaction history from indexDB or cache
-//    update MongoDB (which will update the app)
-//    update the cache (if necessary using a certain "key")
-//    clear the transaction history
-// else if offline,
-//    take the information from the user request, save it to cache or indexDB
-//    update the cache based on calculations (if necessary using a certain "key")
-//    add to transaction history (if necessary using a certain "key")
-```
-
 ## Commit Early and Often
 
 * One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
