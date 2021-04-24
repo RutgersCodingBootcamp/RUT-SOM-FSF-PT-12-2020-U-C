@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+        "image":"https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Sandy_Cheeks.svg/1200px-Sandy_Cheeks.svg.png",
+        "name":"Sandy",
+        "occupation":"Astronaut",
+        "location":"Biodome"
+    },
+    {
+        "id": "2",
+        "image":"https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "name":"SpongeBob",
+        "occupation":"Fry Cook",
+        "location":"A Pinapple Under the Sea"
+    }
+]
