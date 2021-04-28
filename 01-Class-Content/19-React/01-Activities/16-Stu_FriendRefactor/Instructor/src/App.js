@@ -15,11 +15,25 @@ class App extends Component {
       friends: this.state.friends.filter(friend => friend.id !== id)
     });
   }
+  handleSort = (key, asc) => {
+    // copy
+    let friendSorted = [...this.state.friends];
+
+    // sort by key and asc
+    friendSorted.sort( (a, b) => {
+      return a[key] > b[key] ? asc * 1 : asc * -1;
+    });
+
+    // set the state
+    this.setState({ friends: friendSorted });
+  }
 
   render() {
     return (
       <Wrapper>
         {/* <button onClick={() => this.handleRemove(1)}>Remove Spongebob</button> */}
+        <button onClick={() => this.handleSort("name", 1)}>Push for sort name</button>
+        <button onClick={() => this.handleSort("name", -1)}>Push for sort name reverse</button>
         <Title>Friends List</Title>
         {/* {this.state.friends is the stateful version of your friends array} */}
         {this.state.friends.map( friend => (
