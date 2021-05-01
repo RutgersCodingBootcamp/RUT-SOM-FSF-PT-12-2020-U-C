@@ -21,7 +21,8 @@ class SearchAdvanced extends Component {
         }
 
         // on browser back button, this function will run
-        this.props.history.listen( e => {
+        
+        this.destroyListener = this.props.history.listen( e => {
             const path = this.props.location.pathname;
             // copy data from url
             const breed = path.substr("/searchadvanced/".length);
@@ -30,6 +31,10 @@ class SearchAdvanced extends Component {
             }
         });
 
+    }
+    componentWillUnmount = () =>{
+        // will remove the listener after the component is removed
+        this.destroyListener();
     }
 
     updateBreed = breed => {
