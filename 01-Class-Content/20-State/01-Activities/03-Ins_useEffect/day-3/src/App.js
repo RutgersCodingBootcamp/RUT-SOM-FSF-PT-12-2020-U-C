@@ -1,29 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import DeveloperInfo from "./components/Developer";
+import MoodBtns from "./components/MoodBtns";
+import Nav from "./components/Nav";
+import * as API from "./utils/API";
+import DeveloperContext from "./utils/DeveloperContext";
 import "./App.css";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Wrapper from "./components/Wrapper";
+function App() {
+  const [developerState, setDeveloperState] = useState({
+    name: "",
+    mood: "",
+    lifeLongLearner: true,
+    excitementLevel: 0
+  });
 
-import Signup from "./pages/Signup";
-import Search from "./pages/Search";
+  function changeMood(mood) {
+    if(mood === "determined") {
+      developerState.excitementLevel += 10000;
+    }
+    else {
+      developerState.excitementLevel -= 10000;
+    }
+    setDeveloperState({
+      ...developerState,
+      mood
+    });
+  }
 
-const App = () => {
-  document.title = "Wikipedia Searcher";
+  useEffect(() => {
+    // For demonstration purposes, we mock an API call.
+    API.getDeveloper.then((res) => {
+      setDeveloperState(res);
+    });
+  }, []);
+
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={Search} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/search" component={Search} />
-        </Wrapper>
-        <Footer />
-      </div>
-    </Router>
+    <div className="container">
+      <DeveloperContext.Provider value={developerState}>
+        <Nav />
+        <DeveloperInfo />
+        <MoodBtns changeMood={changeMood} />
+      </DeveloperContext.Provider>
+    </div>
   );
-};
+}
 
 export default App;
