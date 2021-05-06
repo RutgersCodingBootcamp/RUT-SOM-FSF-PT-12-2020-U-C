@@ -5,7 +5,7 @@ function Count() {
   const inputRef = useRef();
 
   const [count, dispatch] = useReducer((state, action) => {
-    switch (action) {
+    switch (action.type) {
     case "add":
       return state + 1;
     case "subtract":
@@ -13,7 +13,8 @@ function Count() {
     case "change":
       // convert the value from the input into an integer
       // copy
-      const newCount = parseInt(inputRef.current.value);
+      // const newCount = parseInt(inputRef.current.value); // not preferred
+      const newCount = action.value; // preferred because you are using only the inputs for this reducer
 
       // process 
       // only update the count if the value is numeric
@@ -29,11 +30,11 @@ function Count() {
 
   return (
     <div className="App">
-      <button className="btn btn-success mt-5 mb-5" onClick={() => dispatch("add")}>
+      <button className="btn btn-success mt-5 mb-5" onClick={() => dispatch({type: "add"})}>
         Add
       </button>
       <div>{count}</div>
-      <button className="btn btn-danger mt-5" onClick={() => dispatch("subtract")}>
+      <button className="btn btn-danger mt-5" onClick={() => dispatch({type: "subtract"})}>
         Subtract
       </button>
       <input
@@ -41,7 +42,7 @@ function Count() {
         placeholder="Type new value..."
         ref={inputRef}
       />
-      <button className="btn btn-warning mt-5" onClick={() => dispatch("change")}>
+      <button className="btn btn-warning mt-5" onClick={() => dispatch({ type: "change", value: parseInt(inputRef.current.value)} )}>
         Change
       </button>
     </div>
