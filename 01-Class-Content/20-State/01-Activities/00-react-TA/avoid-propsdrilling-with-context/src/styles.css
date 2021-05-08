@@ -1,0 +1,87 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.Header_style{
+  height: 50px;
+  width:100%;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top:0;
+  left: 0;
+  text-align: center;
+  font-size: 12px;
+}
+.Footer_style{
+  height: 40px;
+  width:100%;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  left:0;
+  position: fixed;
+  text-align: center;
+  font-size: 12px;
+}
+#first, #second , #third, #fourth, #fifth , #sixth{
+  font-size: 10px;
+  font-weight: 1000;
+
+}
+#first {
+  width: 440px;
+  height: 200px;
+  background: red;
+  position: relative;
+  left: 40px;
+  top:5px;
+  font-size: 12px;
+
+}
+
+#second {
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  background: green;
+  left: 100px;
+  top:140px;
+}
+#third{
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  background: pink;
+  left: 120px;
+  top:170px;
+}
+#fourth{
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  background: blue;
+  left: 150px;
+  top:200px;
+  font-size: 8px;
+}
+#fifth {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  background: olive;
+  left: 170px;
+  top: 230px;
+  font-size: 6px
+  }
+  #sixth {
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    background: orange;
+    left: 180px;
+    top: 250px;
+    font-size: 4px
+    }
