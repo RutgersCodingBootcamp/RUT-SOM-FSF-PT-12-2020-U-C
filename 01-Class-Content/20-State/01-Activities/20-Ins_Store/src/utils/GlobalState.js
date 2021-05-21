@@ -9,6 +9,8 @@ const reducer = (state, action) => {
     return { count: state.count + 1 };
   case "subtract":
     return { count: state.count - 1 };
+    // case "saveLocation":
+    // return { ...state, currentLocation: {action.lat, action.lon}}
   default:
     throw new Error(`Invalid action type: ${action.type}`);
   }

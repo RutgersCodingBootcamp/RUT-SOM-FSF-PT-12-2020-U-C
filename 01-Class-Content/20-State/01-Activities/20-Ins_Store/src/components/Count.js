@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useCountContext } from "../utils/GlobalState";
 
 function Count() {
   const [state, dispatch] = useCountContext();
+
+  useEffect( () => {
+    // get the location...
+    dispatch({type: "saveLocation", lat: 90, lon:141})
+  })
 
   return (
     <div className="App">
