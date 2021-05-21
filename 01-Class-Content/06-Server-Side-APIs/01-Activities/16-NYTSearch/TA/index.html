@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT Search</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font awesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="jumbotron">
+            <p><i class="far fa-newspaper"></i>New York Times Search</p>
+        </h1>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fab fa-searchengin"></i>Search Parameters
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Search Term:</h5>
+                <input id="search-term" class="form-control"></input>
+
+                <h5 class="card-title">Number of Records to Retrieve:</h5>
+                <select id="number-records" class="custom-select">
+                    <option>5</option>
+                    <option>10</option>
+                </select>
+
+                <h5 class="card-title">Start Year (Optional):</h5>
+                <input id="begin-year" class="form-control"></input>
+
+                <h5 class="card-title">End Year (Optional):</h5>
+                <input id="end-year" class="form-control"></input>
+
+            </div>
+            <div class="card-footer">
+                <button id="search-button" class="btn alert-success">Search</button>
+                <button id="clear-button" class="btn alert-danger">Clear Results</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-table"></i>Top Articles
+            </div>
+            <div class="card-body">
+                <div id="articles"></div>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

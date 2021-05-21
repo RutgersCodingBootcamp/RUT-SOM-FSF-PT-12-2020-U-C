@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Random</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Added link to the jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="text-center">Generate a Lottery Number!</h1>
+
+    <div class="text-center">
+
+      <!-- Here we have our button for generating random numbers (#random-button) -->
+      <button id="lotto-button" class="btn btn-primary btn-lg fa fa-question"></button>
+
+    </div>
+
+  </div>
+
+  <!-- Here we have div called "randomNumber" where our random number will go -->
+  <h1 class="text-center" id="lotto-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      // Notice I didn't set $(".jumbotron") to a var this time?
+      // If you only plan to use that selector once it doesn't need to be a var
+      $("#lotto-button").on("click", function () {
+
+        // ... we generate a random number
+
+        // create varialbe to store our lottery number
+        var lottoNumber = "";
+
+        // loop to generate 9 random numbers from 0 to 9
+        for (var i = 0; i < 9; i++) {
+          // create a random number from 1 to 9
+          var random = Math.floor(Math.random() * 10);
+          console.log("random number =" + random);
+          // concatenate our random number to the lottonumber
+          lottoNumber = random + lottoNumber;
+          console.log("Your lotto number is" + lottoNumber)
+        }
+
+        // ... and then dump the random number into our random-number div.
+        // diplay our lotto number to the webpage
+        $("#lotto-number").prepend("<br><hr>" + lottoNumber);
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
